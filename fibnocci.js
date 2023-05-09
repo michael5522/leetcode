@@ -7,4 +7,4 @@ function fibonacci(n) {
   return fib
 }
 console.log('ola')
-console.log(fibonacci(3));
+console.log(fibonacci(4));
