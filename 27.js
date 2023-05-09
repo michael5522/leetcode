@@ -1,7 +1,4 @@
-* @param { number[] } nums
-  * @param { number } val
-    * @return { number }
-      * /
+
 var removeElement = function (nums, val) {
   for (var i = 0; i < nums.length; i++) {
     if (nums[i] === val) {
@@ -11,3 +8,5 @@ var removeElement = function (nums, val) {
   }
   console.log(nums)
 };
+
+removeElement([1,2,2,2,2,2,2,4,6], 6)
