@@ -31,7 +31,14 @@ function merge(leftArr, rightArr){
 }
 
 
-const gg = [-6, 20, 8, -2, 4]
+// const gg = [-6, 20, 8, -2, 4]
+// console.log(mergeSort(gg))
+
+
+// const gg = [-8,-1,1,3,5]
+// console.log(mergeSort(gg))
+
+const gg = [9, 5, 2, 0, -5]
 console.log(mergeSort(gg))
 //  const abc = [5,-3,7,2]
 //  console.log(mergeSort(abc));
