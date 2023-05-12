@@ -29,4 +29,4 @@ return merge(mergeSort(firstHalf), mergeSort(secondHalf))
 
 
 const gg= [-6,20,8,-2,4]
-mergeSort(gg)
+console.log(mergeSort(gg))
