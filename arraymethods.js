@@ -26,5 +26,19 @@ console.log(fruit)
 console.log(fruit.quantity);
 
 
-let banana = stock.findIndex( gg => gg === 'banana');
+let banana = stock.findIndex( gg => gg.item === 'orange');
 console.log(banana)
+
+let names = ['ando', 'chanto', 'breado'];
+
+let aldo = names.sort();
+console.log(aldo);
+
+
+let numbas = [2,4,1,8,5];
+let sorted = numbas.sort()
+console.log(sorted);
+
+let biggernumbers = [2,4,1,3,15,40,60,25];
+let sort2 = biggernumbers.sort((a,b)=> a-b);
+console.log(sort2)
