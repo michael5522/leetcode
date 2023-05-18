@@ -7,3 +7,24 @@ console.log(isGreaterThan6)
 
 let allGreaterThan0 = nums.every((x) => x > 0);
 console.log(allGreaterThan0);
+
+let allGreaterThan5 = nums.every((x) => x > 5);
+console.log(allGreaterThan5);
+
+
+let stock = [
+  {item: 'kletchup', quantity: 30},
+  { item: 'banana', quantity: 10 },
+  { item: 'orange', quantity: 5 },
+]
+
+console.log(stock)
+
+let fruit = stock.find(xx => xx.item == 'orange');
+console.log(fruit)
+
+console.log(fruit.quantity);
+
+
+let banana = stock.findIndex( gg => gg === 'banana');
+console.log(banana)
