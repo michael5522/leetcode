@@ -13,3 +13,4 @@ linearFunc([1,2,3,4,5]);
 // for loop is O of 'arr' because it's however much arr is. aka O(n)
 
 // O(n) + O(1) + O(1) + O(1);
+// ignore the constants
