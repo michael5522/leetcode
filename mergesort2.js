@@ -1,5 +1,6 @@
 function mergeSort(arr){
   if(arr.length <2){
+    console.log('o m g here---', arr)
     return arr
   }
   console.log('arr.length--', arr.length, arr)
@@ -16,7 +17,7 @@ function merge(leftArr, rightArr){
   console.log('inside MERGE NOW BRO')
   console.log(leftArr, rightArr)
   while(leftArr.length && rightArr.length){
-    if(leftArr[0] <= rightArr[0]){
+    if(leftArr[0] < rightArr[0]){
       sortedArr.push(leftArr.shift())
       console.log('1', sortedArr)
     }else{

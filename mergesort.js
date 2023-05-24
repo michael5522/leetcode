@@ -2,9 +2,9 @@ function mergeSort(n){
   if(n.length<2){
     return n
   }
-console.log('array length',n.length)
+// console.log('array length',n.length)
 const gg = Math.floor(n.length/2);
-console.log('index #',gg)
+// console.log('index #',gg)
 const firstHalf = n.slice(0, gg);
 const secondHalf = n.slice(gg);
 console.log('array divdeded left',firstHalf, 'array divided right',secondHalf)
@@ -15,7 +15,7 @@ return merge(mergeSort(firstHalf), mergeSort(secondHalf))
     console.log('rightArr', rightArr)
     const array = [];
     while (leftArr.length && rightArr.length) {
-      if (leftArr[0] < rightArr[0]) {
+      if (leftArr[0] <= rightArr[0]) {
         array.push(leftArr.shift())
       } else {
         array.push(rightArr.shift())
