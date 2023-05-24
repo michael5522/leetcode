@@ -1,6 +1,6 @@
 function mergeSort(xxx){
   if(xxx.length<2){
-    return xxx
+    return xxx;
   }
 
   const length = xxx.length;
@@ -17,7 +17,7 @@ function mergeSort(xxx){
 function merge(rA, lA){
   let temp = [];
   while(rA.length && lA.length){
-    if(rA[0]< lA[0]){
+    if(rA[0]<= lA[0]){
       temp.push(rA.shift())
     }else{
       temp.push(lA.shift())
