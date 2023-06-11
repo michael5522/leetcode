@@ -1,4 +1,8 @@
 const Header = () => {
+  // const headerSTyle = {
+  //   backgroundColor: 'royalblue',
+  //   color: '#fff'
+  // }
   return (
     <header>
 
