@@ -34,3 +34,10 @@ let order = (time,work) => {
 };
 
 order(2000, ()=>console.log(`${stocks.fruits[0]} was selected`))
+  .then(()=> order(2000, ()=>{console.log(`${stocks.holder}`)}))
+  .then( ()=> order(2000, ()=> console.log('whats up man')))
+  .then( ()=>{
+    return order(2000, ()=>{
+      console.log('my butt ache')
+    })
+  })
