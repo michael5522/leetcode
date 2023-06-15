@@ -64,25 +64,50 @@ let is_shop_open = true;
 
 // order();
 
-let topping_choice = () => {
-  return new Promise((resolve,reject)=>{
-    setTimeout(()=> {
-      resolve(
-        console.log('which topping u want?')
-      );
-    }, 2000);
+// let topping_choice = () => {
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=> {
+//       resolve(
+//         console.log('which topping u want?')
+//       );
+//     }, 2000);
+//   });
+//  };
+
+//  async function kitchen (){
+//   console.log('a')
+//    console.log('b')
+//    console.log('c')
+//    await topping_choice()
+//    console.log('d')
+//    console.log('e')
+//  }
+
+//  kitchen();
+//  console.log('cleaning dish');
+//  console.log('washing face');
+
+function time(ms){
+  return new Promise( (resolve, reject)=> {
+    if(is_shop_open){
+      setTimeout(resolve, ms)
+    }else{
+      reject(console.log('the shop is closed'));
+    }
   });
- };
+};
 
- async function kitchen (){
-  console.log('a')
-   console.log('b')
-   console.log('c')
-   await topping_choice()
-   console.log('d')
-   console.log('e')
- }
+async function kitchen(){
+  try{
+    await time(2000);
+    console.log(`${stocks.fruits[0]}`);
+  }
+  catch(error){
+    console.log('customer left', error)
+  }
+  finally{
+    console.log('day ended shop is closed')
+  }
+}
 
- kitchen();
- console.log('cleaning dish');
- console.log('washing face');
+kitchen();
