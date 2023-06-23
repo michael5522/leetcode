@@ -51,7 +51,7 @@
 import Button from './Button'
 const Form = ({reqType, setReqType}) => {
   return (
-    <div>
+    <form onSubmit={(e)=> e.preventDefault() }>
       <Button
       reqType={reqType}
       setReqType={setReqType}
@@ -67,7 +67,7 @@ const Form = ({reqType, setReqType}) => {
       setReqType={setReqType}
       text="comments"
       />
-    </div>
+    </form>
   )
 }
 

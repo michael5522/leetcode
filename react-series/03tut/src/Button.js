@@ -31,6 +31,8 @@ const Button = ({text, reqType, setReqType}) => {
   return (
     <button
       onClick={( ()=> setReqType(text))}
+      className={(text === reqType) ? "selected": null}
+      type="button"
     >
       {text}
     </button>
