@@ -14,9 +14,13 @@ const cart = document.querySelector("#add-button")
 console.log(cart)
 const cartInput = document.querySelector("#input-field")
 console.log(cartInput.value)
+const shoppingList = document.getElementById("shopping-list")
+console.log(shoppingList)
 
 cart.addEventListener("click", function (){
   let inputValue = cartInput.value
   console.log(cartInput.value)
   push(shoppingListInDB, inputValue)
+  shoppingList.innerHTML += ` <li>${cartInput.value}</li>`
+  cartInput.value = ""
 })
