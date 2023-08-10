@@ -32,12 +32,15 @@ cart.addEventListener("click", function (){
 
 onValue(shoppingListInDB, function(snapshot){
 
-  const gg = Object.values(snapshot.val());
+  const gg = Object.entries(snapshot.val());
 
   clearShoppingListEl()
   for(let i =0; i < gg.length; i++){
-
-    appendShoppingList(gg[i])
+    let currentItem = gg[i]
+    console.log(currentItem)
+    let currentItemID = currentItem[0];
+    let currentItemValue = currentItem[1];
+    appendShoppingList(currentItemValue)
   }
 
 })
