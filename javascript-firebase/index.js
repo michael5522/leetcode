@@ -31,13 +31,17 @@ cart.addEventListener("click", function (){
 })
 
 onValue(shoppingListInDB, function(snapshot){
-  console.log(snapshot.val())
+
   const gg = Object.values(snapshot.val());
-  console.log(gg)
-  shoppingList.innerHTML = ""
+
+  clearShoppingListEl()
   for(let i =0; i < gg.length; i++){
-    console.log(gg[i])
+
     appendShoppingList(gg[i])
   }
 
 })
+
+function clearShoppingListEl(){
+  shoppingList.innerHTML = ""
+}
