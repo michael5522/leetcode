@@ -19,15 +19,16 @@ function clear(){
 }
 
 function appendShoppingList(item){
-  shoppingList.innerHTML += ` <li>${item}</li>`
+  let currentItemID = item[0];
+  let currentItemValue = item[1];
+  let newEl = document.createElement("li")
+  newEl.textContent = currentItemValue
+  shoppingList.append(newEl)
 }
 cart.addEventListener("click", function (){
   let inputValue = cartInput.value
   push(shoppingListInDB, inputValue)
-
   clear()
-  // appendShoppingList(inputValue);
-
 })
 
 onValue(shoppingListInDB, function(snapshot){
@@ -40,7 +41,7 @@ onValue(shoppingListInDB, function(snapshot){
     console.log(currentItem)
     let currentItemID = currentItem[0];
     let currentItemValue = currentItem[1];
-    appendShoppingList(currentItemValue)
+    appendShoppingList(currentItem)
   }
 
 })
