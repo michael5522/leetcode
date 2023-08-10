@@ -17,10 +17,17 @@ console.log(cartInput.value)
 const shoppingList = document.getElementById("shopping-list")
 console.log(shoppingList)
 
+
+function clear(){
+  cartInput.value = ""
+}
+
+function appendShoppingList(item){
+  shoppingList.innerHTML += ` <li>${item}</li>`
+}
 cart.addEventListener("click", function (){
   let inputValue = cartInput.value
-  console.log(cartInput.value)
   push(shoppingListInDB, inputValue)
-  shoppingList.innerHTML += ` <li>${cartInput.value}</li>`
-  cartInput.value = ""
+  appendShoppingList(inputValue);
+  clear()
 })
