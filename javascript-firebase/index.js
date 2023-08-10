@@ -1,7 +1,7 @@
 
 
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import {getDatabase, ref, push} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import {getDatabase, ref, push, onValue} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
   databaseURL: "https://shooping-kart-default-rtdb.firebaseio.com/"
@@ -11,12 +11,8 @@ const database = getDatabase(app)
 const shoppingListInDB = ref(database, "shoppingList")
 
 const cart = document.querySelector("#add-button")
-console.log(cart)
 const cartInput = document.querySelector("#input-field")
-console.log(cartInput.value)
 const shoppingList = document.getElementById("shopping-list")
-console.log(shoppingList)
-
 
 function clear(){
   cartInput.value = ""
@@ -30,4 +26,11 @@ cart.addEventListener("click", function (){
   push(shoppingListInDB, inputValue)
   appendShoppingList(inputValue);
   clear()
+})
+
+onValue(shoppingListInDB, function(snapshot){
+  console.log(snapshot.val())
+  const gg = Object.values(snapshot.val());
+  console.log(gg)
+
 })
