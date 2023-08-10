@@ -24,14 +24,17 @@ function appendShoppingList(item){
 cart.addEventListener("click", function (){
   let inputValue = cartInput.value
   push(shoppingListInDB, inputValue)
-  appendShoppingList(inputValue);
+
   clear()
+  // appendShoppingList(inputValue);
+
 })
 
 onValue(shoppingListInDB, function(snapshot){
   console.log(snapshot.val())
   const gg = Object.values(snapshot.val());
   console.log(gg)
+  shoppingList.innerHTML = ""
   for(let i =0; i < gg.length; i++){
     console.log(gg[i])
     appendShoppingList(gg[i])
