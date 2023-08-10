@@ -37,18 +37,20 @@ cart.addEventListener("click", function (){
 })
 
 onValue(shoppingListInDB, function(snapshot){
+  if(snapshot.exists()){
+    const gg = Object.entries(snapshot.val());
 
-  const gg = Object.entries(snapshot.val());
-
-  clearShoppingListEl()
-  for(let i =0; i < gg.length; i++){
-    let currentItem = gg[i]
-    console.log(currentItem)
-    let currentItemID = currentItem[0];
-    let currentItemValue = currentItem[1];
-    appendShoppingList(currentItem)
+    clearShoppingListEl()
+    for (let i = 0; i < gg.length; i++) {
+      let currentItem = gg[i]
+      console.log(currentItem)
+      let currentItemID = currentItem[0];
+      let currentItemValue = currentItem[1];
+      appendShoppingList(currentItem)
+    }
+  }else{
+    shoppingList.innerHTML = "No items here...yet"
   }
-
 })
 
 function clearShoppingListEl(){
