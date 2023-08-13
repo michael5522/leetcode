@@ -13,13 +13,19 @@ p {
 .flexbox-header>div {
   display: flex;
   font-size: 1em;
-  padding: 10px 20px;
+  padding: 20px 20px;
+}
+
+.flexbox-header>div:nth-child(3){
+  margin-left:auto;
 }
 
 .flexbox-header {
+  display: flex;
   background-color: #96ceb4;
   color: #ffeead;
 }
+
 
 
 .header {
