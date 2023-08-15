@@ -1,15 +1,45 @@
-/* html, body{
-  background-color: gray;
+*{
+  margin: 0;
+  padding: 0;
 }
 
 body{
-  padding: 20px;
-}
-.container{
-  display:flex;
-  flex-direction: column;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #3e4560;
+    color: white;
 }
 
-h1{
+.title{
+  margin: 40px;
   text-align:center;
-} */
+  color: orange;
+}
+
+.container{
+  padding: 0 10px;
+}
+
+label{
+  display:block;
+  font-size:20px;
+  margin-bottom: 5px;
+}
+
+input{
+  margin-bottom: 25px;
+}
+
+input[type="text"]{
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  background-color: orange;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.box{
+  height: 100px;
+    width: 100%;
+    background-color: #c6d5ac;
+    margin-bottom: 25px;
+}
