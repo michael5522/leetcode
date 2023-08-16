@@ -53,5 +53,5 @@ const convertRGBToHex = (r,g,b) => {
 
 slider.addEventListener("input", function(){
   console.log(event.target.value)
-  sliderText.textContent = event.target.value
+  sliderText.textContent = `${event.target.value}%`
 })
