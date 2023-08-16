@@ -20,7 +20,35 @@ hexInput.addEventListener("keyup", ()=> {
   inputColor.style.backgroundColor = `#${strippedHex}`;
 })
 
-// console.log(isValidHex("#000000"))
-// console.log(isValidHex("#0000000"))
-// console.log(isValidHex("#ffffff"))
-// console.log(isValidHex("fff123"))
+const hexToDecimal = hex => {
+  if(!isValidHex(hex)) return null;
+
+  let strippedHex = hex.replace("#", "");
+  if(strippedHex.length === 3){
+    strippedHex = strippedHex[0] + strippedHex[0]
+    + strippedHex[1] + strippedHex[1]
+    + strippedHex[2] + strippedHex[2]
+  }
+  console.log(strippedHex)
+
+  const r = parseInt(strippedHex.substring(0,2), 16);
+  const g = parseInt(strippedHex.substring(2, 4), 16);
+  const b = parseInt(strippedHex.substring(4, 6), 16);
+
+  return {r,g,b}
+}
+
+
+
+// console.log(hexToDecimal("fff"));
+
+const convertRGBToHex = (r,g,b) => {
+  let fOne = ("0" + r.toString(16)).slice(-2)
+  let fTwo = ("0" + g.toString(16)).slice(-2)
+  let fThree = ("0" + b.toString(16)).slice(-2)
+  const hex = "#" + fOne + fTwo + fThree;
+  return hex;
+
+}
+
+console.log(convertRGBToHex(0,255,255))
