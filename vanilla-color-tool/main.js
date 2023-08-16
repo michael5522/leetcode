@@ -55,3 +55,22 @@ slider.addEventListener("input", function(){
   console.log(event.target.value)
   sliderText.textContent = `${event.target.value}%`
 })
+
+
+//Create the alterColor function which accepts hex value and percentage
+//convert the hex value to rgb
+//increase each r,g,b value by appropriate amount (percentage of 255)
+//use the new r,g,b values to convert to a hex value
+//return the hex value'
+
+const alteredColor = (hex,percentage) =>{
+  const {r,g,b} = hexToDecimal(hex);
+  const amount = Math.floor((percentage/100)*255);
+  const newR = r + amount;
+  const newG = g + amount;
+  const newB = b + amount;
+  console.log(newR, newG, newB)
+  return convertRGBToHex(newR, newG, newB)
+}
+
+console.log(alteredColor('fff', 10));
