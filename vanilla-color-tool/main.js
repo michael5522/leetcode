@@ -66,11 +66,21 @@ slider.addEventListener("input", function(){
 const alteredColor = (hex,percentage) =>{
   const {r,g,b} = hexToDecimal(hex);
   const amount = Math.floor((percentage/100)*255);
-  const newR = r + amount;
-  const newG = g + amount;
-  const newB = b + amount;
+  const newR = increaseWithin0To255(r, amount)
+  const newG = increaseWithin0To255(g, amount)
+  const newB = increaseWithin0To255(b, amount)
   console.log(newR, newG, newB)
   return convertRGBToHex(newR, newG, newB)
 }
 
-console.log(alteredColor('fff', 10));
+const increaseWithin0To255 = (hex ,amount){
+  if(hex + amount > 255){
+    return 255
+  }else if( hex + amount < 0){
+    return 0
+  }else {
+    return hex + amount
+  }
+}
+
+console.log(alteredColor('', 10));
