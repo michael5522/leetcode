@@ -2,6 +2,8 @@ console.log('ola')
 
 const hexInput = document.getElementById("hexInput");
 const inputColor = document.getElementById("inputColor");
+const sliderText = document.getElementById("sliderText");
+const slider = document.getElementById("slider");
 
 const isValidHex = (hex) => {
   if(!hex) return false;
@@ -39,9 +41,6 @@ const hexToDecimal = hex => {
 }
 
 
-
-// console.log(hexToDecimal("fff"));
-
 const convertRGBToHex = (r,g,b) => {
   let fOne = ("0" + r.toString(16)).slice(-2)
   let fTwo = ("0" + g.toString(16)).slice(-2)
@@ -51,4 +50,8 @@ const convertRGBToHex = (r,g,b) => {
 
 }
 
-console.log(convertRGBToHex(0,255,255))
+
+slider.addEventListener("input", function(){
+  console.log(event.target.value)
+  sliderText.textContent = event.target.value
+})
