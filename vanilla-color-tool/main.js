@@ -82,3 +82,22 @@ slider.addEventListener('input', () => {
   alteredColorText.innerText = `Altered Color ${alteredHex}`;
 
 })
+
+const lightenText = document.getElementById("lightenText")
+const darkenedText = document.getElementById("darkenText")
+const toggleBtn = document.getElementById("toggleBtn")
+
+const greato = ()=>{
+  console.log('was clicked')
+  if (toggleBtn.classList.contains('toggled')) {
+    toggleBtn.classList.remove('toggled')
+    lightenText.classList.remove('unselected')
+    darkenedText.classList.add('unselected')
+  } else {
+    toggleBtn.classList.add('toggled')
+    lightenText.classList.add('unselected')
+    darkenedText.classList.remove('unselected')
+
+  }
+}
+toggleBtn.addEventListener("click", greato)
