@@ -13,6 +13,7 @@ hexInput.addEventListener('keyup', () => {
   const strippedHex = hex.replace('#', '');
 
   inputColor.style.backgroundColor = "#" + strippedHex;
+  reset();
 })
 
 const isValidHex = (hex) => {
@@ -69,15 +70,17 @@ const increaseWithin0To255 = (hex, amount) => {
   return newHex;
 }
 
-alterColor("fff", 10)
 
 slider.addEventListener('input', () => {
   if (!isValidHex(hexInput.value)) return;
 
   sliderText.textContent = `${slider.value}%`;
+  const valueAddition =
+    toggleBtn.classList.contains('toggled') ?
+      -slider.value
+      : slider.value;
 
-
-  const alteredHex = alterColor(hexInput.value, slider.value);
+  const alteredHex = alterColor(hexInput.value, valueAddition);
   alteredColor.style.backgroundColor = alteredHex;
   alteredColorText.innerText = `Altered Color ${alteredHex}`;
 
@@ -99,5 +102,14 @@ const greato = ()=>{
     darkenedText.classList.remove('unselected')
 
   }
+  reset();
 }
 toggleBtn.addEventListener("click", greato)
+
+
+reset = () =>{
+  slider.value = 0;
+  sliderText.innerText = `0%`;
+  alteredColor.style.backgroundColor = hexInput.value;
+  alteredColorText.innerText = `Altered Color ${ hexInput.value }`;
+}
