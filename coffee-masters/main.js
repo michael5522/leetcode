@@ -1,18 +1,12 @@
-// let friendsAtYourParty = 0;
-// let count = 0
-// while (friendsAtYourParty < 5) {
-//   count++;
-//   console.log(count)
-//   friendsAtYourParty = friendsAtYourParty + 1;
-// }
-// console.log('xxx',friendsAtYourParty);
+console.log('ola')
 
-// const timetoRepeat= 10;
-// const character = 'x';
-// let answer = ""
-// for(let i = 0; i < 10; i++){
+let num1 = null;
 
-//   answer = answer + character;
-// }
-// console.log(answer);
-`
+let gg = document.querySelector(".container");
+// console.log(gg)
+gg.addEventListener("click", function(e){
+  console.log(typeof e.target.innerText)
+  num1 = e.target.innerText;
+  console.log( num1);
+
+})

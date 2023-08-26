@@ -17,6 +17,11 @@ body {
 
 .blank{
   grid-column: 1 / -1;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  text-align: right;
+  padding: 20px 5px;
 }
 
 .c{
@@ -28,5 +33,27 @@ body {
 }
 
 .block{
-  border: 1px solid;
+  background-color: #d8d9db;
+  font-size: 40px;
+    cursor: pointer;
+}
+
+.block:hover{
+  background-color: red;
+}
+
+.block:active{
+  background-color: purple;
+}
+
+.divide, .multiply, .minus, .plus, .equal{
+  background-color: #df974c;
+}
+
+.divide:hover, .multiply:hover, .minus:hover, .plus:hover, .equal:hover{
+  background-color: red
+}
+
+.divide:active, .multiply:active, .minus:active, .plus:active, .equal:active{
+  background-color: purple;
 }
