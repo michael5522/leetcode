@@ -38,7 +38,13 @@ function handleSymbol(value){
       runningTotal = 0;
       break;
     case "=":
-      console.log('equals')
+      if(previousOperator === null){
+        return
+      }
+      flushOperation(parseInt(buffer))
+      previousOperator = null;
+      buffer = "" + runningTotal;
+      runningTotal = 0;
       break;
     case "←":
       if(buffer.length === 1){
@@ -52,11 +58,41 @@ function handleSymbol(value){
     case "-":
     case "×":
     case "÷":
-      console.log('math symbol')
+      handleMath(value)
       break;
   }
 }
 
 function displayNum(){
   display.innerText = buffer;
+}
+
+
+function handleMath(value){
+  if(buffer === '0'){
+    console.log('nada')
+    return;
+  }
+  const intBuffer = parseInt(buffer);
+  if(runningTotal === 0){
+    runningTotal = intBuffer;
+  }else{
+    flushOperation(intBuffer)
+  }
+
+  previousOperator = value;
+  buffer = "0";
+
+}
+
+function flushOperation(intBuffer) {
+  if (previousOperator === "+") {
+    runningTotal += intBuffer;
+  } else if (previousOperator === "-") {
+    runningTotal -= intBuffer;
+  } else if (previousOperator === "×") {
+    runningTotal *= intBuffer;
+  } else {
+    runningTotal /= intBuffer;
+  }
 }
