@@ -18,7 +18,7 @@ function buttonClick(value){
   }
   displayNum()
 }
-let buffer = '0'
+let buffer = '0';
 function handleNumber(value){
   console.log('handle num',value)
   if(buffer === '0'){
@@ -28,9 +28,33 @@ function handleNumber(value){
   }
   console.log(buffer)
 }
+let runningTotal = 0;
+let previousOperator;
 
 function handleSymbol(value){
-  console.log('handle symbol',value)
+  switch (value) {
+    case "C":
+      buffer = "0";
+      runningTotal = 0;
+      break;
+    case "=":
+      console.log('equals')
+      break;
+    case "←":
+      if(buffer.length === 1){
+        buffer = '0';
+      }else{
+        buffer = buffer.substring(0, buffer.length - 1)
+      }
+      console.log('back arrow')
+      break;
+    case "+":
+    case "-":
+    case "×":
+    case "÷":
+      console.log('math symbol')
+      break;
+  }
 }
 
 function displayNum(){
