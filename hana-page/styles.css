@@ -1,4 +1,4 @@
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+/* Variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 
 :root {
   --black: #171321;
@@ -53,6 +53,10 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 
 /* background color divs */
 
@@ -96,7 +100,6 @@ a:hover {
   display: block;
   font-weight: 300;
 }
-
 
 #intro h2 {
   font-size: 4rem;
@@ -180,39 +183,7 @@ nav [class*="fa-"]:hover {
   background-color: var(--hotmag);
 }
 
-
-/* footer section */
-
-footer {
-  text-align: center;
-  padding: 4rem 0;
-}
-
-footer ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 2rem 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 3rem;
-  font-size: 3rem;
-}
-
-@media (min-width: 850px) {
-  nav {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  nav li:first-child {
-    flex-basis: auto;
-    text-align: left;
-    margin-right: auto;
-  }
-}
-
-/* project part */
+/* projects section */
 #projects {
   padding: 4rem 1rem;
 }
@@ -260,4 +231,57 @@ footer ul {
   border-radius: 25px;
 }
 
+
+/* footer section */
+
+footer {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 1rem;
+  }
+  #projects img{
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .text {
+    order: 2;
+    text-align: right;
+    grid-column: 5/11;
+    grid-row: 1/2;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
 }
