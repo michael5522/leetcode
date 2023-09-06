@@ -1,4 +1,4 @@
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+/* Variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 
 :root {
   --black: #171321;
@@ -53,11 +53,19 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 
 /* background color divs */
 
 .section-plum {
   background-color: var(--plum);
+}
+
+.section-blue {
+  background-color: var(--dkblue);
 }
 
 .gradient {
@@ -175,6 +183,54 @@ nav [class*="fa-"]:hover {
   background-color: var(--hotmag);
 }
 
+/* projects section */
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--aqua);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+
+.blackbox {
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--black);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+#projects img {
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  border-left: 1px solid var(--aqua);
+  border-top: 1px solid var(--aqua);
+  border-radius: 25px;
+}
+
 
 /* footer section */
 
@@ -192,6 +248,29 @@ footer ul {
   justify-content: center;
   gap: 3rem;
   font-size: 3rem;
+}
+
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 1rem;
+  }
+  #projects img{
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .text {
+    order: 2;
+    text-align: right;
+    grid-column: 5/11;
+    grid-row: 1/2;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
 }
 
 @media (min-width: 850px) {
