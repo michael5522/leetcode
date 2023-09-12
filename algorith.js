@@ -45,4 +45,18 @@ const unique2 = (arr) => {
   console.log(breadcrumbs)
   return result;
 }
-console.log(unique2([1,4,2,1]))
+// console.log(unique2([1,4,2,1]))
+
+const uniqSort = function(arr){
+  const breadcrumbs = {};
+  const answer = []
+  for(let i = 0; i < arr.length; i++){
+    if(!breadcrumbs[arr[i]]){
+      answer.push(arr[i]);
+      breadcrumbs[arr[i]] = true;
+    }
+    console.log('XXX',answer, breadcrumbs)
+  }
+  return answer.sort((a,b) => a - b)
+}
+console.log(uniqSort([4,2,2,3,2,2,2]));
