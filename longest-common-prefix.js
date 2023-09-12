@@ -21,7 +21,7 @@ var longestCommonPrefix = function (strs) {
     // Loop through the other strings
     console.log('0 1st loop---',strs[0], i)
     for (let j = 1; j < strs.length; j++) {
-      console.log('1 inner loop---',strs[j])
+      console.log('1 inner loop---',strs[j], j)
       console.log('xxx', strs[0][i], strs[j][i])
       console.log('-------loop copmlete')
       // Check if this character is also present in the same position of each string
