@@ -89,3 +89,15 @@ const memoTimes10 = (n) => {
 // console.log('~~~~~~~~~~~~~~TASK 2~~~~~~~~~~~~~~');
 // console.log('Task 2 calculated value:', memoTimes10(9));
 // console.log('Task 2 cached value:', memoTimes10(9));
+
+function linearSearch(list, item){
+console.log(list,item)
+let index = -1;
+list.forEach((listItem,i) => {
+  if(listItem === item){
+    index = i;
+  }
+});
+return index;
+}
+console.log(linearSearch([2,6,7,90,103], 2));
