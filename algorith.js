@@ -100,4 +100,28 @@ list.forEach((listItem,i) => {
 });
 return index;
 }
-console.log(linearSearch([2,6,7,90,103], 2));
+// console.log(linearSearch([2,6,7,90,103], 2));
+
+
+const favoriteBooks = [];
+function addFavoriteBook(xxx){
+  if(!xxx.includes('Great')){
+    favoriteBooks.push(xxx);
+}
+}
+
+addFavoriteBook("A Song of Ice and Fire");
+addFavoriteBook("The Great Gatsby");
+addFavoriteBook("Crime & Punishment");
+addFavoriteBook("Great Expectations");
+addFavoriteBook("You Don't Know JS");
+// console.log(favoriteBooks)
+
+function printFavoriteBooks(){
+  console.log( `favorite books: ${favoriteBooks.length}`)
+  for(let book of favoriteBooks){
+    console.log(book);
+  }
+}
+
+// printFavoriteBooks();
