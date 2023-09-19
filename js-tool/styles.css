@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: sans-serif;
+  background-color: orange;
+  color: white;
+}
+
+.container{
+  padding: 0 10px;
+}
+
+.title{
+  text-align: center;
+  margin: 20px;
+  color: black;
+}
+
+label{
+  display:block;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+input{
+  margin-bottom: 25px;
+}
+
+input[type="text"]{
+  padding: 8px 10px;
+  border-radius:10px;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.box{
+  height: 100px;
+  width: 100%;
+  background-color: #c6d5ac;
+  margin-bottom: 25px;
+}
