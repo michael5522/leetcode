@@ -43,4 +43,25 @@ const convertHexToRGB = (hex) => {
  return {r,g,b};
 }
 
-console.log(convertHexToRGB("fff"))
+// console.log(convertHexToRGB("fff"))
+
+const convertRGBtoHex = (r,g,b) => {
+  let convertR = r.toString(16);
+  let convertG = g.toString(16);
+  let convertB = b.toString(16);
+  console.log('before', convertR, convertG, convertB);
+  if(convertR.length != 2){
+    convertR = `0${convertR}`
+  }
+  if (convertG.length != 2) {
+    convertG = `0${convertG}`
+  }
+  if (convertB.length != 2) {
+    convertB = `0${convertB}`
+  }
+  console.log(convertR, convertG, convertB);
+  const hex = "#" + convertR + convertG + convertB;
+  return hex;
+}
+
+console.log(convertRGBtoHex(0,255,255))
