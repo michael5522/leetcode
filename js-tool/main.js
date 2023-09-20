@@ -1,5 +1,7 @@
 const hexInput = document.getElementById("hexInput")
 const inputColor = document.getElementById("inputColor")
+const slider = document.getElementById("slider")
+const sliderText = document.getElementById("sliderText")
 const isValidHex = (hex) => {
   console.log('hex here', hex)
   if(!hex){
@@ -65,3 +67,9 @@ const convertRGBtoHex = (r,g,b) => {
 }
 
 console.log(convertRGBtoHex(0,255,255))
+
+slider.addEventListener("input", ()=>{
+  console.log('fuk me', slider.value);
+  sliderText.textContent = `${slider.value}%`;
+}
+)
