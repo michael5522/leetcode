@@ -43,3 +43,39 @@ input[type="text"]{
   background-color: #c6d5ac;
   margin-bottom: 25px;
 }
+
+.toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.toggle-btn{
+  height: 30px;
+  width: 60px;
+  border-radius: 30px;
+  background-color: red;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.inner-circle{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: yellow;
+  transition: all 250ms;
+}
+
+.toggle-text {
+  font-size: 18px;
+}
+
+.toggle-btn.toggled > .inner-circle {
+  transform: translateX(30px);
+  background-color: #333;
+}
+
+.unselected {
+  opacity: .25;
+}

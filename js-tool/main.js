@@ -1,15 +1,17 @@
-const hexInput = document.getElementById("hexInput")
-const inputColor = document.getElementById("inputColor")
-const slider = document.getElementById("slider")
-const sliderText = document.getElementById("sliderText")
+const hexInput = document.getElementById("hexInput");
+const inputColor = document.getElementById("inputColor");
+const slider = document.getElementById("slider");
+const sliderText = document.getElementById("sliderText");
+const alteredColor = document.getElementById("alteredColor");
+const alteredColorText = document.getElementById("alteredColorText");
 const isValidHex = (hex) => {
-  console.log('hex here', hex)
+  // console.log('hex here', hex)s
   if(!hex){
     return false;
   }
 
   const strippedHex = hex.replace("#", '');
-  console.log('gg',strippedHex.length)
+  // console.log('gg',strippedHex.length)
   return strippedHex.length === 3 || strippedHex.length === 6;
 }
 
@@ -22,6 +24,7 @@ hexInput.addEventListener("keyup", ()=>{
   }
   const strippedHex = pp.replace("#", '');
   inputColor.style.backgroundColor = `#${strippedHex}`;
+  reset();
 })
 
 //Create a function to convert Hex to RGB
@@ -51,7 +54,7 @@ const convertRGBtoHex = (r,g,b) => {
   let convertR = r.toString(16);
   let convertG = g.toString(16);
   let convertB = b.toString(16);
-  console.log('before', convertR, convertG, convertB);
+  // console.log('before', convertR, convertG, convertB);
   if(convertR.length != 2){
     convertR = `0${convertR}`
   }
@@ -61,15 +64,83 @@ const convertRGBtoHex = (r,g,b) => {
   if (convertB.length != 2) {
     convertB = `0${convertB}`
   }
-  console.log(convertR, convertG, convertB);
+  // console.log(convertR, convertG, convertB);
   const hex = "#" + convertR + convertG + convertB;
   return hex;
 }
 
-console.log(convertRGBtoHex(0,255,255))
+// console.log(convertRGBtoHex(0,255,255))
 
 slider.addEventListener("input", ()=>{
-  console.log('fuk me', slider.value);
+
+
+
   sliderText.textContent = `${slider.value}%`;
+  const pp = hexInput.value;
+
+  if (!isValidHex(pp)) {
+    return;
+  }
+
+  const valueAddition =
+    toggleBtn.classList.contains('toggled') ?
+      -slider.value
+      : slider.value;
+
+
+  let newColor =alterColor(pp, valueAddition)
+  console.log(newColor)
+  alteredColor.style.backgroundColor = `${newColor}`;
+  alteredColorText.innerText = `Altered Color: ${newColor}`
 }
 )
+
+const alterColor = (hex, percentage) => {
+  // console.log(hex, percentage)
+  const {r,g,b} = convertHexToRGB(hex)
+  const amount = Math.floor((percentage/100) * 255);
+  console.log('old',r,g,b)
+
+  const increaseWithin0To255 = (hex, amount) => {
+    const newHex = hex + amount;
+    if (newHex > 255) return 255;
+    if (newHex < 0) return 0;
+    return newHex;
+  }
+
+  const newR = increaseWithin0To255(r, amount)
+  const newG = increaseWithin0To255(g, amount)
+  const newB = increaseWithin0To255(b, amount)
+  console.log('new',newR, newG, newB)
+
+
+  return convertRGBtoHex(newR, newG, newB)
+}
+
+console.log(alterColor('fff', 10))
+
+
+const lightenText = document.getElementById("lightenText")
+const darkenText = document.getElementById("darkenText")
+const toggleBtn = document.getElementById("toggleBtn")
+
+toggleBtn.addEventListener('click', ()=>{
+  if (toggleBtn.classList.contains('toggled')) {
+    toggleBtn.classList.remove('toggled');
+    lightenText.classList.remove('unselected');
+    darkenText.classList.add('unselected');
+  } else {
+    toggleBtn.classList.add('toggled');
+    lightenText.classList.add('unselected');
+    darkenText.classList.remove('unselected');
+  }
+
+  reset();
+})
+
+const reset = () => {
+  slider.value = 0;
+  sliderText.innerText = '0%';
+  alteredColor.style.backgroundColor = hexInput.value;
+  alteredColorText.innerText = `Altered Color ${hexInput.value}`;
+}
