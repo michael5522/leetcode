@@ -24,6 +24,7 @@ hexInput.addEventListener("keyup", ()=>{
   }
   const strippedHex = pp.replace("#", '');
   inputColor.style.backgroundColor = `#${strippedHex}`;
+  reset();
 })
 
 //Create a function to convert Hex to RGB
@@ -133,4 +134,13 @@ toggleBtn.addEventListener('click', ()=>{
     lightenText.classList.add('unselected');
     darkenText.classList.remove('unselected');
   }
+
+  reset();
 })
+
+const reset = () => {
+  slider.value = 0;
+  sliderText.innerText = '0%';
+  alteredColor.style.backgroundColor = hexInput.value;
+  alteredColorText.innerText = `Altered Color ${hexInput.value}`;
+}
