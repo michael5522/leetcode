@@ -1,8 +1,9 @@
-const hexInput = document.getElementById("hexInput")
-const inputColor = document.getElementById("inputColor")
-const slider = document.getElementById("slider")
-const sliderText = document.getElementById("sliderText")
-const alteredColor = document.getElementById("alteredColor")
+const hexInput = document.getElementById("hexInput");
+const inputColor = document.getElementById("inputColor");
+const slider = document.getElementById("slider");
+const sliderText = document.getElementById("sliderText");
+const alteredColor = document.getElementById("alteredColor");
+const alteredColorText = document.getElementById("alteredColorText");
 const isValidHex = (hex) => {
   // console.log('hex here', hex)s
   if(!hex){
@@ -70,15 +71,26 @@ const convertRGBtoHex = (r,g,b) => {
 // console.log(convertRGBtoHex(0,255,255))
 
 slider.addEventListener("input", ()=>{
+
+
+
   sliderText.textContent = `${slider.value}%`;
   const pp = hexInput.value;
 
   if (!isValidHex(pp)) {
     return;
   }
-  let newColor =alterColor(pp, slider.value)
+
+  const valueAddition =
+    toggleBtn.classList.contains('toggled') ?
+      -slider.value
+      : slider.value;
+
+
+  let newColor =alterColor(pp, valueAddition)
   console.log(newColor)
   alteredColor.style.backgroundColor = `${newColor}`;
+  alteredColorText.innerText = `Altered Color: ${newColor}`
 }
 )
 
@@ -105,3 +117,20 @@ const alterColor = (hex, percentage) => {
 }
 
 console.log(alterColor('fff', 10))
+
+
+const lightenText = document.getElementById("lightenText")
+const darkenText = document.getElementById("darkenText")
+const toggleBtn = document.getElementById("toggleBtn")
+
+toggleBtn.addEventListener('click', ()=>{
+  if (toggleBtn.classList.contains('toggled')) {
+    toggleBtn.classList.remove('toggled');
+    lightenText.classList.remove('unselected');
+    darkenText.classList.add('unselected');
+  } else {
+    toggleBtn.classList.add('toggled');
+    lightenText.classList.add('unselected');
+    darkenText.classList.remove('unselected');
+  }
+})
