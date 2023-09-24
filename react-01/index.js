@@ -7,7 +7,6 @@
 //   </div>
 // )
 
-
 function Header() {
   return (
     <header>
@@ -22,6 +21,7 @@ function Header() {
     </header>
   )
 }
+
 
 function Footer() {
   return (
