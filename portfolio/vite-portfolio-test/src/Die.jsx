@@ -1,17 +1,10 @@
+/* eslint-disable react/prop-types */
 
-export default function Die(value){
+export default function Die(props){
   return (
-    <div className="container">
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
-      <div className="box">1</div>
+    <div className="die-face">
+      <h2 className="die-num">{props.value}</h2>
     </div>
+
   )
 }

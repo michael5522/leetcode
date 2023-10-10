@@ -13,23 +13,32 @@ main {
   height: 400px;
   max-width: 800px;
   border-radius: 5px;
-}
-
-.container{
+  padding: 20px;
   display: flex;
-  height: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.box{
-  display:flex;
-  width: 100px;
-  height: 100px;
-  outline-style: solid;
+.dice-container{
+display: grid;
+grid-template: auto auto/ repeat(5, 1fr);
+gap: 20px;
+}
+
+.die-face{
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  display: flex;
   justify-content: center;
   align-items:center;
-  margin: 25px;
+  cursor: pointer;
+  background-color: white;
+}
+
+
+.die-num{
+  font-size: 2rem;
 }

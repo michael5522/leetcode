@@ -1,21 +1,38 @@
 
 import Die from './Die.jsx'
-function App() {
+export default function App() {
   /**
-   * Challenge:
-   *
-   * - Create a Die component that takes a `value` prop
-   * - Render 10 instances of the Die component (manually)
-   *      - Provide a number between 1-6 for the value on each
-   *        for now
-   * - Style the <main> and <Die> components
-   *   to look like they do in the slide
-   */
+ * Challenge:
+ *
+ * Write a function (allNewDice) that returns an array
+ * of 10 random numbers between 1-6 inclusive.
+ *
+ * Log the array of numbers to the console for now
+ */
+
+  function AllNewDice(){
+    const array = [];
+    for(let i = 1; i < 10; i ++){
+      array.push(Math.floor(Math.random()*6) +1)
+    }
+    return array;
+  }
+  console.log(AllNewDice())
+
   return (
     <main>
-      <Die/>
+      <div className="dice-container">
+        <Die value="1" />
+        <Die value="2" />
+        <Die value="3" />
+        <Die value="4" />
+        <Die value="5" />
+        <Die value="6" />
+        <Die value="7" />
+        <Die value="8" />
+        <Die value="9" />
+        <Die value="10" />
+      </div>
     </main>
   )
 }
-
-export default App
