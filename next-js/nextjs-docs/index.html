@@ -1,0 +1,41 @@
+<html>
+
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const app = document.getElementById("app")
+      function Header({title}){
+
+
+        return (
+          <h1>{title ? title : 'defaulted to none'}</h1>
+        )
+      }
+      function HomePage(){
+        const [likes, setLikes] = React.useState(0);
+        const names = ['person 1', 'person 2', 'person 3'];
+        const map = names.map(xxx => <li key={xxx}>{xxx}</li>)
+        function handleClick(){
+          console.log('increment like count')
+          setLikes(prevState => prevState + 1)
+        }
+        return (
+          <div>
+            <Header title="develop, preview, ship"/>
+            <ul>
+              {map}
+            </ul>
+
+            <button onClick={handleClick}>Like ({likes})</button>
+          </div>
+        );
+      }
+      ReactDOM.render(<HomePage/>,app)
+    </script>
+  </body>
+
+</html>
