@@ -30,14 +30,14 @@ const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
     <img src={imgURL}
     className="rounded-full w-[120px] h-[120px] object-cover"
     />
-    <p className="info-text flex text-center">{feedback}</p>
+    <p className="info-text flex text-center mt-6 max-w-sm">{feedback}</p>
     <div className="flex">
         <img
           src={star}
           width={20}
           height={20}
         />
-        <p className="info-text">(4.5)</p>
+        <p className="info-text">{`(${rating})`}</p>
     </div>
       <p className="text-2xl">{customerName}</p>
 
