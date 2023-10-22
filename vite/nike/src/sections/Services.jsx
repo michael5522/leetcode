@@ -2,20 +2,42 @@ import { services } from "../constants";
 import { ServiceCard } from "../components";
 
 const Services = () => {
-  // console.log(services)
+
 
   return (
+    <section className="flex max-container justify-center gap-9">
+
+        {services.map((xd) => (
+          <ServiceCard  key={xd.imgURL} {...xd}/>
+      ))}
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // <section className='max-container flex justify-center flex-wrap gap-9'>
     //   {services.map((service) => (
     //     <ServiceCard key={service.label} {...service} />
     //   ))}
     // </section>
-    <section className="flex">
-      {services.map((service) => (
-          <ServiceCard key={service.label} {...service} />
 
-      ))}
-    </section>
   );
 };
 

@@ -24,18 +24,24 @@ const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
     //     {customerName}
     //   </h3>
     // </div>
-    <div className="flex justify-center">
-      <div className="flex  items-center flex-col">
-        <img src={imgURL} width={150} height={150} className="rounded-full justify-center"/>
-        <p className="mt-3 font-montserrat max-w-sm text-center text-slate-gray">{feedback}</p>
-        <div className="mt-3 flex justify-center items-center gap-2.5">
-          <img src={star} width={30} height={30} />
-          <p className="text-xl font-montserrat text-slate-gray">{`(${rating})`}</p>
-        </div>
 
-        <p className="text-3xl  font-bold font-montserrat text-slate-gray">{customerName}</p>
-      </div>
+
+  <div className="flex flex-col justify-center items-center">
+    <img src={imgURL}
+    className="rounded-full w-[120px] h-[120px] object-cover"
+    />
+    <p className="info-text flex text-center mt-6 max-w-sm">{feedback}</p>
+    <div className="flex">
+        <img
+          src={star}
+          width={20}
+          height={20}
+        />
+        <p className="info-text">{`(${rating})`}</p>
     </div>
+      <p className="text-2xl">{customerName}</p>
+
+  </div>
   );
 };
 
