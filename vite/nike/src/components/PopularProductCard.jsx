@@ -1,7 +1,7 @@
 import { star } from "../assets/icons";
 
 const PopularProductCard = ({ imgURL, name, price }) => {
-  console.log(imgURL, name, price)
+  // console.log(imgURL, name, price)
   return (
   //   <div className='flex flex-1 flex-col w-full max-sm:w-full'>
   //     <img src={imgURL} alt={name} className='w-[282px] h-[282px]' />
@@ -23,30 +23,29 @@ const PopularProductCard = ({ imgURL, name, price }) => {
 
 
 
-
-
-
-
-
-  <div className="flex w-full flex-col">
-    <div className="flex">
-        <img
-          src={imgURL}
-          alt={name}
-          className="w-[280px] h-[280px]"
-        />
-    </div>
-    <div className="flex mt-5">
+    <div className="flex flex-1 flex-col w-full max-sm:w-full">
+      <div className="flex flex-1 flex-col max-sm:w-full" ></div>
       <img
-      src={star}
-      alt="star img"
+        src={imgURL}
+        className="w-[282px] h-[282px]"
       />
-      <h3>(5)</h3>
-    </div>
-    <h3 className="font-palanquin mt-2 text-2xl leading-normal font-semibold">{name}</h3>
-    <h3 className="mt-2 font-semibold text-2xl leading-normal font-palanquin text-coral-red">{price}</h3>
+      <div className=" mt-8 flex justify-start gap-2.5">
+        <img
+          src={star}
+          width={20}
+          height={20}
+        />
+        <p>(4.5)</p>
+        <p>{name}</p>
+        <p className="text-coral-red">{price}</p>
+      </div>
 
-  </div>
+    </div>
+
+
+
+
+
   );
 };
 
