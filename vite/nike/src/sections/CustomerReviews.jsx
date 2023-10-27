@@ -2,52 +2,20 @@ import { ReviewCard } from "../components";
 import { reviews } from "../constants";
 
 const CustomerReviews = () => {
-
   return (
-    <section className="max-container items-center">
-
-        <h2 className="text-4xl font-palanquin font-bold text-center">What do our <span className="text-coral-red">Customers</span> Say?
-        </h2>
-        <p className="info-text text-center">Here genuine stories from our satisfied customers about their exceptional experiences with us</p>
-        <div className="flex flex-1 mt-24 justify-evenly">
-        {reviews.map((xd)=>(
-          <ReviewCard key={xd.customerName} {...xd}/>
-        ))}
-        </div>
-
+    <section className='max-container'>
+      <h3 className="text-4xl bold text-center font-bold">
+        What our <span className="text-coral-red">Customers </span> say?
+      </h3>
+      <p className="m-auto mt-4 text-center info-text lg:max-w-lg">Hear genuine stories from our satisfied customers about their
+        exceptional experiences with us.
+      </p>
+      <div className="mt-20 flex flex-1 justify-evenly items-center max-lg:flex-col">
+      {reviews.map((xd)=>(
+        <ReviewCard {...xd} key={xd}/>
+      ))}
+      </div>
     </section>
-
-
-
-
-    // <section className="max-container items-center">
-    //   <h3 className="text-4xl font-palanquin font-bold text-center">What do our <span className="text-coral-red">Customers</span> Say?</h3>
-    //   <p className="mt-4 info-text text-center">Hear genuine stories from our satisfied customers about their
-    //      exceptional experiences with us.</p>
-    //   <div className="mt-24 flex justify-evenly max-lg:flex-col">
-    //     {reviews.map((review) => (
-    //       <ReviewCard key={review.imgURL} {...review} />
-    //     ))}
-    //   </div>
-
-    // </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   );
 };
 
