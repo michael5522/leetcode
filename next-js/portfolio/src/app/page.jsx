@@ -4,7 +4,7 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <main>
-      <h1>hi</h1>
+      <h1>hello</h1>
     </main>
   )
 }
