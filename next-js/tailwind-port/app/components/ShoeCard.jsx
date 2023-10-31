@@ -1,6 +1,6 @@
 import Image from "next/image";
 const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
-  console.log('gg', imgURL)
+
   const handleClick = () => {
     if (bigShoeImg !== imgURL.bigShoe) {
       changeBigShoeImage(imgURL.bigShoe);
