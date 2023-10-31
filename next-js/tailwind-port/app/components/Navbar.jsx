@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {hamburger} from '../assets/icons/';
-import {headerLogo} from '../assets/images';
+// import {headerLogo} from '../assets/images';
 import {navLinks} from "../constants";
 
 export default function Navbar() {
@@ -9,16 +9,10 @@ export default function Navbar() {
       <div className="flex justify-between items-center max-container">
         <a href='/'>
 
-          <Image
-            src={headerLogo}
-            alt="logo"
-            width={125}
-            height={29}
-            className='m-0 w-[129px] h-[29px]'
-          />
+          <h1>Person Name</h1>
         </a>
 
-        <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
+        <ul className="flex-1 flex justify-end items-center gap-16 max-lg:hidden">
           {navLinks.map((xx) => (
             <li key={xx.label}>
               <a
