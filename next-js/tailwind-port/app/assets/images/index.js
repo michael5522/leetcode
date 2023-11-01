@@ -21,7 +21,11 @@ import thumbnailShoe1 from './thumbnail-shoe1.svg'
 import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
+import bootstrap from './bootstrap.png'
+import css3 from './css3.png'
 export {
+    css3,
+    bootstrap,
     bigShoe1,
     bigShoe2,
     bigShoe3,

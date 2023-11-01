@@ -1,17 +1,16 @@
 import { star } from "../assets/icons";
 import Image from "next/image";
 
-const PopularProductCard = ({ imgURL, name, price }) => {
-  // console.log(imgURL, name, price)
+const PopularProductCard = ({ imgURL, name }) => {
   return (
-    <div className="flex flex-col flex-1 w-full max-sm:w-full">
+    <div className="flex flex-col flex-1 w-full justify-center items-center max-sm:w-full">
 
       <Image
         src={imgURL}
         alt="alt img"
-        className="w-[282px] h-[282px]"
+        className="w-[150px] h-[150px]"
       />
-      <div className="mt-8 flex justify-start gap-2.5">
+      <div className="mt-8 flex justify-center gap-2.5">
 
         <Image
           src={star}
@@ -19,14 +18,10 @@ const PopularProductCard = ({ imgURL, name, price }) => {
           width={25}
           height={25}
         />
-        <p className="font-montserrat text-xl leading-normal text-slate-gray">
-          (5)
-        </p>
       </div>
-      <h3 className="mt-2 text-2xl">
+      <h3 className="mt-2 text-2xl text-center">
         {name}
       </h3>
-      <p className="text-coral-red mt-2 font-semibold text-2xl">{price}</p>
 
     </div>
 
