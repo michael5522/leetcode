@@ -21,6 +21,7 @@ const Nav = () => {
               <a
                 href={xx.href}
                 className='font-montserrat leading-normal text-lg text-slate-gray'
+                target="_blank" rel="noreferrer"
               >
                 {xx.label}
               </a>
@@ -42,6 +43,7 @@ const Nav = () => {
           />
         </div>
       </div>
+
     </header>
   );
 };

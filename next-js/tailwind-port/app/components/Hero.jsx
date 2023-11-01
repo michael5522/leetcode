@@ -3,6 +3,7 @@ import Image from "next/image";
 
 
 const Hero = () => {
+  console.log(bigShoe1)
   return (
     <section
       id='home'

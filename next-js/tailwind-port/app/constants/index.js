@@ -1,6 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
-
 export const navLinks = [
   { href: "#about-me", label: "About Me" },
   { href: "#skills", label: "Skills" },
@@ -49,7 +48,7 @@ export const products = [
     imgURL: shoe7,
     name: "Nike Air Jordan-001",
     price: "$230.20",
-  },
+  }
 ];
 
 export const services = [
@@ -122,3 +121,56 @@ export const socialMedia = [
   { src: twitter, alt: "twitter logo" },
   { src: instagram, alt: "instagram logo" },
 ];
+
+
+import { bootstrap, css3, express, html, javascript, jquery, next, node, postgresql, reactIMG , styled, tailwind } from "../assets/logos";
+export const logos = [
+  {
+    imgURL: javascript,
+    name: "JavaScript"
+  },
+  {
+    imgURL: html,
+    name: "HTML"
+  },
+  {
+    imgURL: css3,
+    name: "CSS"
+  },
+  {
+    imgURL: reactIMG,
+    name: "React"
+  },
+  {
+    imgURL: node,
+    name: "Node.js"
+  },
+  {
+    imgURL: express,
+    name: "Express"
+  },
+  {
+    imgURL: tailwind,
+    name: "Tailwind"
+  },
+  {
+    imgURL: postgresql,
+    name: "Postgresql"
+  },
+  {
+    imgURL: next,
+    name: "NextJS"
+  },
+  {
+    imgURL: styled,
+    name: "Styled Component"
+  },
+  {
+    imgURL: bootstrap,
+    name: "Bootstrap"
+  },
+  {
+    imgURL: jquery,
+    name: "jQuery"
+  }
+]
