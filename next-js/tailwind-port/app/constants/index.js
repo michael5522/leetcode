@@ -3,7 +3,7 @@ import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6
 export const navLinks = [
   { href: "#about-me", label: "About Me" },
   { href: "#skills", label: "Skills" },
-  { href: "#tools", label: "Tools" },
+  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -127,50 +127,121 @@ import { bootstrap, css3, express, html, javascript, jquery, next, node, postgre
 export const logos = [
   {
     imgURL: javascript,
-    name: "JavaScript"
+    name: "JavaScript",
+    href: "https://www.javascript.com/"
   },
   {
     imgURL: html,
-    name: "HTML"
+    name: "HTML",
+    href: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
   },
   {
     imgURL: css3,
-    name: "CSS"
+    name: "CSS",
+    href: "https://www.w3schools.com/html/html_css.asp"
   },
   {
     imgURL: reactIMG,
-    name: "React"
+    name: "React",
+    href: "https://react.dev/"
+
   },
   {
     imgURL: node,
-    name: "Node.js"
+    name: "Node.js",
+    href: "https://nodejs.org/en"
   },
   {
     imgURL: express,
-    name: "Express"
+    name: "Express",
+    href: "https://expressjs.com/"
   },
   {
     imgURL: tailwind,
-    name: "Tailwind"
+    name: "Tailwind",
+    href: "https://tailwindcss.com/"
   },
   {
     imgURL: postgresql,
-    name: "Postgresql"
+    name: "Postgresql",
+    href: "https://www.postgresql.org/"
   },
   {
     imgURL: next,
-    name: "NextJS"
+    name: "NextJS",
+    href: "https://nextjs.org/"
   },
   {
     imgURL: styled,
-    name: "Styled Component"
+    name: "Styled Component",
+    href: "https://styled-components.com/docs/basics"
   },
   {
     imgURL: bootstrap,
-    name: "Bootstrap"
+    name: "Bootstrap",
+    href: "https://getbootstrap.com/"
   },
   {
     imgURL: jquery,
-    name: "jQuery"
+    name: "jQuery",
+    href: "https://jquery.com/"
+  }
+]
+
+
+import { aws, babel, git, github, npmImg, slack, vscode, webpack} from "../assets/tools-images";
+export const toolimages = [
+  {
+    imgURL: aws,
+    name: "AWS",
+    href:"https://aws.amazon.com/"
+  },
+  {
+    imgURL: babel,
+    name: "Babel",
+    href: "https://babeljs.io/"
+  },
+  {
+    imgURL: git,
+    name: "Git",
+    href: "https://git-scm.com/"
+  },
+  {
+    imgURL: github,
+    name: "Github",
+    href: "https://github.com/"
+  },
+  {
+    imgURL: npmImg,
+    name: "npm",
+    href: "https://www.npmjs.com/"
+  },
+  {
+    imgURL: slack,
+    name: "Slack",
+    href: "https://www.npmjs.com/"
+  },
+  {
+    imgURL: vscode,
+    name: "VSCode",
+    href: "https://code.visualstudio.com/"
+  },
+  {
+    imgURL: webpack,
+    name: "Webpack",
+    href: "https://webpack.js.org/"
+  }
+]
+
+
+import { desktopquote, desktopwedding, mobilequote, mobilewedding } from "../assets/project-images";
+export const projectInfo = [
+  {
+    thumbnail: mobilequote,
+    bigShoe: desktopquote
+  },
+  {
+    thumbnail: mobilewedding,
+    bigShoe: desktopwedding
   }
 ]

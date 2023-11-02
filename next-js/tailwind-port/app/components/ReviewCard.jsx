@@ -8,7 +8,7 @@ const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
       <Image
         src={imgURL}
         alt="image of dood"
-        className="rounded-full w-[120px] h-[120px]"
+        className="rounded-full w-[130px] h-[130px]"
       />
       <p className="mt-6 info-text text-center max-w-sm">{feedback}</p>
       <div className="mt-3 flex justify-center items-center gap-2">
