@@ -1,10 +1,23 @@
 import Image from "next/image";
-const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
-  console.log(imgURL, changeBigShoeImage, bigShoeImg)
+const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg, currentTitle, changeTitle, currentStack, changeStack, currentDesc, changeDesc, currentURL, changeURL }) => {
+
   const handleClick = () => {
     if (bigShoeImg !== imgURL.bigShoe) {
       changeBigShoeImage(imgURL.bigShoe);
     }
+    if(currentTitle !== imgURL.title){
+      changeTitle(imgURL.title)
+    }
+    if(currentStack !== imgURL.stack){
+      changeStack(imgURL.stack)
+    }
+    if(currentDesc !== imgURL.desc){
+      changeDesc(imgURL.desc)
+    }
+    if(currentURL !== imgURL.href){
+      changeURL(imgURL.href)
+    }
+
   };
 
   return (
@@ -15,13 +28,13 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
         } cursor-pointer max-sm:flex-1`}
       onClick={handleClick}
     >
-      <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4'>
+      <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-44 sm:h-44 rounded-md max-sm:p-4'>
         <Image
           src={imgURL.thumbnail}
-          alt='shoe collection'
-          width={127}
+          alt='pic of project in mobile'
+          width={90}
           height={103.34}
-          className='object-contain'
+          className='object-contain rounded-md'
         />
       </div>
     </div>

@@ -7,8 +7,15 @@ const Button = ({
   textColor,
   borderColor,
   fullWidth,
+  linkURL
 }) => {
+  console.log('inside button', label)
   return (
+    <a
+    href={linkURL}
+    target="_blank"
+    rel="noreferrer"
+    >
     <button
       className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
       ${backgroundColor
@@ -26,6 +33,7 @@ const Button = ({
         />
       )}
     </button>
+    </a>
   );
 };
 

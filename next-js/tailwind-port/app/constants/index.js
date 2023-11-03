@@ -234,14 +234,31 @@ export const toolimages = [
 ]
 
 
-import { desktopquote, desktopwedding, mobilequote, mobilewedding } from "../assets/project-images";
+import { desktopquote, desktopwedding, mobilequote, mobilewedding, dMobile, dDesktop } from "../assets/project-images";
 export const projectInfo = [
   {
     thumbnail: mobilequote,
-    bigShoe: desktopquote
+    bigShoe: desktopquote,
+    title: "Supurb Quote",
+    stack: "#html #css #javascript #ajax",
+    desc: "A custom quote generating website that allows users to receive personally catered quotes. User has the ability to generate random quotes or select their own using various API endpoints via AJAX using XMLHttpRequests",
+    href: "https://michael5522.github.io/supurb-quotes/"
   },
   {
     thumbnail: mobilewedding,
-    bigShoe: desktopwedding
+    bigShoe: desktopwedding,
+    title: "A-List Wedding",
+    stack: "#reactjs #bootstrap #postgreSQL #nodejs #express",
+    desc: "A mobile responsive full stack application using ReactJS to give users the tools to plan their wedding. Designed wireframes using Figma and database schema to provide functionality and database structure. User login and data stored in secure PostgreSQL database.",
+    href: "https://a-list-wedding.michaelkchang.com/"
+  },
+  {
+    thumbnail: dMobile,
+    bigShoe: dDesktop,
+    title: "Random BCE",
+    stack: "#nextjs #tailwindcss",
+    desc: "Using the latest next.js and tailwind css to create this portfolio website",
+    href: "https://tailwindcss.com/docs/border-radius"
   }
+
 ]
