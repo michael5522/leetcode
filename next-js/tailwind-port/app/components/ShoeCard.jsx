@@ -33,8 +33,8 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg, currentTitle, change
           src={imgURL.thumbnail}
           alt='pic of project in mobile'
           width={90}
-          height={103.34}
-          className='object-contain rounded-md'
+          height={90}
+          className='object-cover rounded-md'
         />
       </div>
     </div>
