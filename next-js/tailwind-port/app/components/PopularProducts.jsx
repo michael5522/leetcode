@@ -11,7 +11,7 @@ const PopularProducts = () => {
 
       </div>
 
-      <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14">
+      <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-6 gap-14">
         {logos.map((xd) => (
           <PopularProductCard {...xd} key={xd.name} />
         ))}
@@ -23,7 +23,7 @@ const PopularProducts = () => {
 
       </div>
 
-      <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14">
+      <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-6 gap-14">
         {toolimages.map((xd) => (
           <PopularProductCard {...xd} key={xd.name} />
         ))}
