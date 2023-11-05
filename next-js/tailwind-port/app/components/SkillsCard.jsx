@@ -1,7 +1,7 @@
 import { star } from "../assets/icons";
 import Image from "next/image";
 
-const PopularProductCard = ({ imgURL, name, href }) => {
+const SkillsCard = ({ imgURL, name, href }) => {
   return (
     <div className="flex flex-col flex-1 w-full justify-center items-center max-sm:w-full">
       <div className="w-37 h-37 flex justify-center items-center bg-coral-red rounded-full">
@@ -17,7 +17,6 @@ const PopularProductCard = ({ imgURL, name, href }) => {
         </a>
       </div>
       <div className="mt-2 flex justify-center items-center gap-1.5">
-
             <Image
               src={star}
               alt="rating icon"
@@ -28,16 +27,8 @@ const PopularProductCard = ({ imgURL, name, href }) => {
               {name}
             </h3>
       </div>
-
-
-
-
     </div>
-
-
-
-
   );
 };
 
-export default PopularProductCard;
+export default SkillsCard;

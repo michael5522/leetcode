@@ -2,15 +2,26 @@ import { bigShoe2 } from "../assets/images";
 import Button from "../components/Button";
 import Image from "next/image";
 
-const SuperQuality = () => {
+const About = () => {
   return (
     <section
-      id='about-me'
-      className='flex justify-between items-center max-lg:flex-col gap-10 w-full min-h-screen max-container border-2 border-purple-500'
+      id='about'
+      className='flex justify-between items-center max-lg:flex-col w-full min-h-screen max-container border-2 border-purple-500'
     >
+      <div className="flex-1 flex justify-end items-center">
+
+        <Image
+          src={bigShoe2}
+          alt="shoe8"
+          width={450}
+          height={522}
+          className="object-contain"
+        />
+      </div>
+
       <div className="flex flex-1 flex-col">
 
-        <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg font-bold text-center'>
+        <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg font-bold'>
           About Me
 
         </h2>
@@ -26,18 +37,9 @@ const SuperQuality = () => {
 
       </div>
 
-      <div className="flex-1 flex justify-center items-center">
 
-        <Image
-          src={bigShoe2}
-          alt="shoe8"
-          width={450}
-          height={522}
-          className="object-contain"
-        />
-      </div>
     </section>
   );
 };
 
-export default SuperQuality;
+export default About;

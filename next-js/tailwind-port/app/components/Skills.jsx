@@ -1,8 +1,8 @@
 import { products } from "../constants";
 import { logos } from "../constants";
 import { toolimages } from "../constants";
-import PopularProductCard from "../components/PopularProductCard";
-const PopularProducts = () => {
+import SkillsCard from "../components/SkillsCard";
+const Skills = () => {
   return (
     <section id='skills' className='max-container max-sm:mt-12 border-2 border-red-500'>
       <div className="flex flex-col items-center">
@@ -13,7 +13,7 @@ const PopularProducts = () => {
 
       <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-6 gap-14">
         {logos.map((xd) => (
-          <PopularProductCard {...xd} key={xd.name} />
+          <SkillsCard {...xd} key={xd.name} />
         ))}
       </div>
 
@@ -25,11 +25,11 @@ const PopularProducts = () => {
 
       <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-6 gap-14">
         {toolimages.map((xd) => (
-          <PopularProductCard {...xd} key={xd.name} />
+          <SkillsCard {...xd} key={xd.name} />
         ))}
       </div>
     </section>
   );
 };
 
-export default PopularProducts;
+export default Skills;
