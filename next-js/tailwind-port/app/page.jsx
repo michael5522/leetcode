@@ -1,11 +1,8 @@
 import Navbar from './components/Navbar';
-import  Hero  from './components/Hero';
-import PopularProducts from './components/PopularProducts';
-import SuperQuality from './components/SuperQuality';
-import Services from './components/Services';
-import SpecialOffer from './components/SpecialOffer';
-import CustomerReviews from './components/CustomerReviews';
-import Subscribe from './components/Subscribe';
+import Hero  from './components/Hero';
+import Skills from './components/Skills';
+import About from './components/About';
+import Projects from './components/Projects';
 import Footer from "./components/Footer"
 
 export default function Home() {
@@ -16,25 +13,19 @@ export default function Home() {
         <Hero />
       </section>
       <section className="padding">
-        <SuperQuality />
-      </section>
-      <section className="padding">
-        <PopularProducts />
+        <About />
       </section>
 
       <section className="padding-x py-10">
-        <Services/>
+        <Projects />
       </section>
+
       <section className="padding">
-        <SpecialOffer/>
+        <Skills />
       </section>
-      <secion className="padding">
-        <CustomerReviews/>
-      </secion>
-      <section className="padding-x sm:py-32 py-16 w-full">
-        <Subscribe />
-      </section>
-      <section className=' bg-black padding-x padding-t pb-8'>
+
+
+      <section className='bg-coral-red padding-x padding-t pb-8'>
         <Footer/>
       </section>
     </main>

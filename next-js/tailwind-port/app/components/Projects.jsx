@@ -3,7 +3,7 @@
 
   import { useState } from "react";
   import { shoes } from "../constants";
-  import ShoeCard from "./ShoeCard";
+  import ProjectCard from "./ProjectCard";
   import { bigShoe1 } from "../assets/images";
   import { desktopquote } from "../assets/project-images"
   import Image from "next/image";
@@ -11,7 +11,7 @@
   import {arrowRight} from "../assets/icons";
 
   import {projectInfo} from "../constants"
-  const Services = () => {
+  const Projects = () => {
     console.log('111',projectInfo)
     const [bigShoeImg, setBigShoeImg] = useState(desktopquote);
     const [currentTitle, setCurrentTitle] = useState(projectInfo[0].title)
@@ -44,7 +44,7 @@
 
         </div>
 
-        <div className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center'>
+        <div className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-hero  bg-cover bg-center'>
 
           <Image
            src={bigShoeImg}
@@ -58,7 +58,7 @@
             {projectInfo.map((projecto, index) => (
 
               <div key={index}>
-                <ShoeCard
+                <ProjectCard
                   index={index}
                   imgURL={projecto}
                   changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
@@ -81,4 +81,4 @@
     );
   };
 
-  export default Services;
+  export default Projects;
