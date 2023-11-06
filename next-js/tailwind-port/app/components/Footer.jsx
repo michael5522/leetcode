@@ -14,7 +14,7 @@ const Footer = () => {
           <h1 className="text-white text-3xl text-center"> Andrew Mckiddny</h1>
         </a>
       </div>
-      <div className="flex items-center gap-10 mt-10 justify-center">
+      <div className="flex items-center max-sm:flex-col max-sm:mt-1 max-sm:gap-1 gap-10 mt-10 justify-center">
         {footerInfo.map((xd)=>(
           (
           <a
@@ -23,7 +23,7 @@ const Footer = () => {
             rel="noreferrer"
               key={xd.info}
             >
-          <div className="flex flex-5 lg:gap-2 gap-8 flex-wrap items-center justify-center text-white mb-5">
+          <div className="flex flex-5 lg:gap-2 gap-1 flex-wrap items-center justify-center text-white mb-5">
 
             <Image
               src={xd.pic}
