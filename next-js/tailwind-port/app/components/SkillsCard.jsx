@@ -1,4 +1,3 @@
-import { star } from "../assets/icons";
 import Image from "next/image";
 
 const SkillsCard = ({ imgURL, name, href }) => {
@@ -17,12 +16,6 @@ const SkillsCard = ({ imgURL, name, href }) => {
         </a>
       </div>
       <div className="mt-2 flex justify-center items-center gap-1.5">
-            <Image
-              src={star}
-              alt="rating icon"
-              width={20}
-              height={20}
-            />
             <h3 className="mt-2 text-2xl text-center">
               {name}
             </h3>

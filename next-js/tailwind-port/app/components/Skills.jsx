@@ -23,7 +23,7 @@ const Skills = () => {
 
       </div>
 
-      <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-6 gap-14">
+      <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-6 gap-14 mb-9">
         {toolimages.map((xd) => (
           <SkillsCard {...xd} key={xd.name} />
         ))}
