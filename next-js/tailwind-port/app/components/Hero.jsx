@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container border-2 border-green-500'
+      className='w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container border-2 border-green-500 bg-hero'
     >
-      <div className='relative xl:w-2/5 max-xl:items-center flex flex-col justify-center items-start w-full  max-xl:text-center max-xl:padding-x pt-28'>
+      <div className='relative xl:w-2/5 max-xl:items-center flex pl-20 flex-col justify-center items-start w-full  max-xl:text-center max-xl:padding-x pt-28'>
         <p className='text-xl font-montserrat text-coral-red ml-5'>
           Hello, I am
         </p>

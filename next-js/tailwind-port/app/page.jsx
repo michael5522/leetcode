@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <main className="relative">
       <Navbar />
-      <section className='xl:padding-l wide:padding-r padding-b'>
+      {/* <section className='xl:padding-l wide:padding-r'> */}
+      <section className='wide:padding-r'>
         <Hero />
       </section>
       <section className="padding">
