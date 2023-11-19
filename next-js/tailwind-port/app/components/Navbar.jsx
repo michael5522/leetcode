@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import {hamburger, close} from '../assets/icons/';
-import {express} from '../assets/logos'
+import {navlogo} from '../assets/logos';
 import {navLinks} from "../constants";
+
 
 import {useState} from "react";
 import Link from "next/link";
@@ -11,7 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
-    console.log('fuk you!')
+    console.log('mini nav bar clicked')
     setIsOpen(!isOpen);
     console.log(isOpen)
   }
@@ -20,22 +21,22 @@ export default function Navbar() {
       <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
         <Link href='/'>
           <Image
-            src={express}
+            src={navlogo}
             alt="logo"
             width="100"
             height="55"
             className="cursor-pointer"
-            proiority
+            priority
           />
         </Link>
 
         <div className="hidden sm:flex">
                <ul className="hidden sm:flex">
                    {navLinks.map((xx) => (
-                     <li key={xx.label} className="ml-10 uppercase hover:border-b text-xl">
+                     <li key={xx.label} className="ml-10 hover:border-b text-xl">
                        <a
                          href={xx.href}
-                         className='font-montserrat leading-normal text-lg text-slate-gray'
+                         className='font-montserrat leading-normal text-lg text-coral-red'
                     >
                        {xx.label}
                     </a>
@@ -51,13 +52,16 @@ export default function Navbar() {
             height={25}
             alt="menu"
             className="focus:border-none active:border-none"
+
           />
+
+
         </div>
       </div>
 
       <div className={
         isOpen
-        ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+          ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#FBFBFB] p-10 ease-in duration-500"
         : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
       }
       >
@@ -68,7 +72,7 @@ export default function Navbar() {
           width={25}
           height={25}
           alt="close"
-          className="focus:border-none active:border-none cursor-pointer"
+            className="focus:border-none active:border-none cursor-pointer"
           onClick={handleClick}
         />
       </div>
@@ -79,7 +83,7 @@ export default function Navbar() {
               <li key={xx.label} className="py-4 cursor-pointer">
                 <a
                   href={xx.href}
-                  className='font-montserrat leading-normal text-lg text-slate-gray'
+                  className='font-montserrat leading-normal text-lg text-coral-red hover:border-b'
                   onClick={()=> setIsOpen(false)}
                 >
                   {xx.label}

@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <section id='skills' className='max-container max-sm:mt-12 border-2 border-red-500'>
       <div className="flex flex-col items-center">
-        <h2 className="text-4xl font-palanquin font-bold text-coral-red">Technical Skills
+        <h2 className="text-4xl font-palanquin font-bold text-coral-red mt-9">Technical Skills
         </h2>
 
       </div>
