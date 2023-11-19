@@ -13,6 +13,7 @@ import postgresql from './postgresql.png';
 import reactIMG from './react.png';
 import styled from './styled.png';
 import tailwind from './tailwind.png';
+import navlogo from './navlogo.png';
 export {
   bootstrap,
   css3,
@@ -28,5 +29,7 @@ export {
 
   reactIMG,
   styled,
-  tailwind
+  tailwind,
+
+  navlogo
 }
