@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
 
-    <footer className='max-container'
+    <footer className='max-container2'
     id="contact">
       <div className="flex flex-col">
         <a href="#home">

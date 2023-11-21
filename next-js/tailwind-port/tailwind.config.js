@@ -17,6 +17,10 @@ module.exports = {
       '4xl': ['48px', '58px'],
       '8xl': ['96px', '106px']
     },
+    minHeight: {
+      'screen': '100vh',
+      'half': '75vh'
+    },
     extend: {
       fontFamily: {
         palanquin: ['Palanquin', 'sans-serif'],
@@ -35,6 +39,14 @@ module.exports = {
       backgroundImage: {
         'hero': "url('assets/images/collection-background.svg')",
         'card': "url('assets/images/thumbnail-background.svg')",
+        'ola': "url('assets/images/orange-bg.jpg')",
+        'minicard': "url('assets/images/mini-card.jpg')",
+        'bubbles': "url('assets/images/bubbles.jpg')",
+        'splash': "url('assets/images/splash.svg')",
+        'tree': "url('assets/images/tree.svg')",
+        'skills': "url('assets/images/skills.png')",
+        'watercolor': "url('assets/images/watercolor.jpg')"
+
       },
       screens: {
         "wide": "1440px"
