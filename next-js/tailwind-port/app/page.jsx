@@ -10,14 +10,14 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       {/* <section className='xl:padding-l wide:padding-r'> */}
-      <section className='wide:padding-r'>
+      <section className=''>
         <Hero />
       </section>
       <section className="padding">
         <About />
       </section>
 
-      <section className="padding-x py-10">
+      <section className="padding-x py-10 bg-gray-100">
         <Projects />
       </section>
 
@@ -26,7 +26,7 @@ export default function Home() {
       </section>
 
 
-      <section className='bg-coral-red padding-x padding-t pb-8'>
+      <section className='bg-coral-red padding-x padding-t py-10 bg-tree bg-cover bg-center'>
         <Footer/>
       </section>
     </main>

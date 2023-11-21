@@ -22,6 +22,7 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 import bootstrap from './bootstrap.png'
 import css3 from './css3.png'
+
 export {
     css3,
     bootstrap,
