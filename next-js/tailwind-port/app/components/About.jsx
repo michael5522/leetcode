@@ -13,15 +13,15 @@ const About = () => {
         <Image
           src={bigShoe2}
           alt="shoe8"
-          width={450}
-          height={522}
-          className="object-contain"
+          width={400}
+          height={472}
+          className="object-contain bg-ryzen bg-no-repeat bg-center bg-contain rounded"
         />
       </div>
 
       <div className="flex flex-1 flex-col">
 
-        <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg font-bold'>
+        <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg'>
           About Me
 
         </h2>
