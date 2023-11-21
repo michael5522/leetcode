@@ -45,8 +45,16 @@ module.exports = {
         'splash': "url('assets/images/splash.svg')",
         'tree': "url('assets/images/tree.svg')",
         'skills': "url('assets/images/skills.png')",
-        'watercolor': "url('assets/images/watercolor.jpg')"
+        'watercolor': "url('assets/images/watercolor.jpg')",
+        'ryzen': "url('assets/images/ryzen.png')"
 
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '50%': '75%',
+        '16': '4rem',
       },
       screens: {
         "wide": "1440px"
