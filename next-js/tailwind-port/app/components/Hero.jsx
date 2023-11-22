@@ -15,7 +15,7 @@ const Hero = () => {
         </p>
 
 
-        <div className='hidden flex-1 justify-center items-center bg-cover bg-center mt-3 pt-28 max-sm:flex'>
+        <div className='hidden flex-1 justify-center items-center bg-cover bg-center mt-2 pt-15 max-sm:flex'>
           <Image
             src={bigShoe1}
             alt="logo"
@@ -27,7 +27,7 @@ const Hero = () => {
 
 
         <h1 className='mt-10 font-palanquin text-8xl max-sm:text-[52px] max-sm:leading-[19px] font-bold ml-5 max-sm:-ml-0'>
-          <span className='relative z-9'>
+          <span className='relative z-9 font-montserrat'>
             Bob Burger
           </span>
           <br />
