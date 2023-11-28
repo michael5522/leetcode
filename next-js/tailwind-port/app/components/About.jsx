@@ -22,7 +22,7 @@ const About = () => {
         />
       </div>
 
-      <div className="flex-1 flex justify-end items-center max-xl:hidden">
+      <div className="flex-1 flex justify-end items-center max-sm:hidden">
 
         <Image
           src={bigShoe2}

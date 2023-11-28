@@ -13,15 +13,15 @@ export default function Home() {
       <section className=''>
         <Hero />
       </section>
-      <section className="padding">
+      <section className="padding bg-gray-100">
         <About />
       </section>
 
-      <section className="padding-x py-10 bg-gray-100">
+      <section className="padding-x py-10">
         <Projects />
       </section>
 
-      <section className="padding">
+      <section className="padding bg-gray-100">
         <Skills />
       </section>
 
