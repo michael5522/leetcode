@@ -1,4 +1,4 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
+import { facebook, instagram, shieldTick, support, truckFast, twitter, city, email, phone } from "../assets/icons";
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -147,20 +147,39 @@ export const projectInfo = [
 
 ]
 
+// export const footerInfo = [
+//   {
+//     info: "Orange County",
+//     pic: instagram,
+//     link: "https://www.google.com/maps/place/Orange+County,+CA/@33.6410077,-118.0496294,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428"
+//   },
+//   {
+//     info: "michaelkuochang@gmail.com",
+//     pic: twitter,
+//     link: "mailto:michaelkuochang@gmail.com"
+//   },
+//   {
+//     info: "949-276-1910",
+//     pic: facebook,
+//     link: "tel:949-276-1910"
+
+//   },
+// ]
+
 export const footerInfo = [
   {
     info: "Orange County",
-    pic: instagram,
+    pic: city,
     link: "https://www.google.com/maps/place/Orange+County,+CA/@33.6410077,-118.0496294,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428"
   },
   {
     info: "michaelkuochang@gmail.com",
-    pic: twitter,
+    pic: email,
     link: "mailto:michaelkuochang@gmail.com"
   },
   {
     info: "949-276-1910",
-    pic: facebook,
+    pic: phone,
     link: "tel:949-276-1910"
 
   },
