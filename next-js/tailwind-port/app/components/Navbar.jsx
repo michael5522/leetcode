@@ -36,8 +36,8 @@ export default function Navbar() {
                      <li key={xx.label} className="ml-10 hover:border-b text-xl">
                        <a
                          href={xx.href}
-                         className='font-montserrat leading-normal text-lg text-coral-red'
-                    >
+                         className='font-montserrat leading-normal text-lg'
+                       >
                        {xx.label}
                     </a>
                   </li>
@@ -61,7 +61,7 @@ export default function Navbar() {
 
       <div className={
         isOpen
-          ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#FBFBFB] p-10 ease-in duration-500"
+          ? "fixed left-0 top-0 w-[75%] sm:hidden h-screen bg-[#FBFBFB] p-10 ease-in duration-500"
         : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
       }
       >
@@ -83,7 +83,7 @@ export default function Navbar() {
               <li key={xx.label} className="py-4 cursor-pointer">
                 <a
                   href={xx.href}
-                  className='font-montserrat leading-normal text-lg text-coral-red hover:border-b'
+                  className='font-montserrat leading-normal text-lg hover:border-b'
                   onClick={()=> setIsOpen(false)}
                 >
                   {xx.label}

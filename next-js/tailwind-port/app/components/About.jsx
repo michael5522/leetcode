@@ -8,7 +8,7 @@ const About = () => {
       id='about'
       className='flex justify-between items-center max-lg:flex-col w-full min-h-screen max-container border-2 border-purple-500 max-sm:min-h-half'
     >
-      <h2 className='hidden font-montserrat text-3xl pt-9 capitalize max-sm:flex'>
+      <h2 className='hidden font-palanquin text-3xl pt-9 capitalize max-sm:flex max-sm:text-[50px] max-sm:leading-[39px] font-bold max-sm:tracking-tight'>
         About Me
       </h2>
       <div className="hidden max-sm:flex">
@@ -35,16 +35,16 @@ const About = () => {
 
       <div className="flex flex-1 flex-col">
 
-        <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg max-sm:hidden'>
+        <h2 className='font-palanquin capitalize text-8xl font-bold lg:max-w-lg max-sm:hidden'>
           About Me
         </h2>
 
-        <p className="lg:max-w-lg mt-4 info-text max-sm:text-base max-sm:leading-[24px]">
+        <p className="lg:max-w-lg mt-4 ml-3 info-text max-sm:text-base max-sm:leading-[24px]">
           Hi, I work in in front-end web development using Reactjs and am experienced in creating dynamic, user-friendly websites. I am proficient in using Tailwindcss to enhance the visual appeal of my projects.
 
 
         </p>
-        <p className="lg:max-w-lg mt-6 info-text max-sm:text-base max-sm:mt-3 max-sm:mb-7 max-sm:leading-[24px]">
+        <p className="lg:max-w-lg mt-6 ml-3 info-text max-sm:text-base max-sm:mt-3 max-sm:mb-7 max-sm:leading-[24px]">
           Our dedication to detail and excellence ensures your satisfaction  is that I can create software from nothing that solves real problems.
         </p>
 

@@ -67,10 +67,10 @@ const Projects = () => {
           </div>
         </div>
 
-        <p className='font-montserrat text-slate-gray text-lg leading-8 mt-14 mb-2 sm:max-w-sm max-sm:mt-2 max-sm:text-sm'>
+        <p className='font-montserrat text-slate-gray min-h-[120px] text-lg leading-8 mt-14 mb-2 sm:max-w-sm max-sm:mt- max-sm:text-sm'>
           {currentDesc}
         </p>
-        <p className='font-montserrat text-slate-gray text-md leading-8 mb-14 sm:max-w-sm italic max-sm:text-sm max-sm:mb-5'>
+        <p className='font-montserrat text-slate-gray min-h-[40px] text-md leading-8 mb-14 sm:max-w-sm italic max-sm:text-sm max-sm:mb-5'>
           {currentStack}
         </p>
         <div className="ms-1">
