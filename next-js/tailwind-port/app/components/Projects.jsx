@@ -1,23 +1,23 @@
 "use client";
 
-
 import { useState } from "react";
-import { shoes } from "../constants";
+// import { shoes } from "../constants";
 import ProjectCard from "./ProjectCard";
-import { bigShoe1 } from "../assets/images";
-import { desktopquote } from "../assets/project-images"
+// import { bigShoe1 } from "../assets/images";
+import { desktopquote } from "../assets/project-images";
 import Image from "next/image";
 import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
 
-import { projectInfo } from "../constants"
+import { projectInfo } from "../constants";
 const Projects = () => {
   console.log('111', projectInfo)
   const [bigShoeImg, setBigShoeImg] = useState(desktopquote);
-  const [currentTitle, setCurrentTitle] = useState(projectInfo[0].title)
-  const [currentStack, setCurrentStack] = useState(projectInfo[0].stack)
-  const [currentDesc, setCurrentDesc] = useState(projectInfo[0].desc)
-  const [currentURL, setCurrentURL] = useState(projectInfo[0].href)
+  const [projectImage, setProjectImage] = useState(desktopquote);
+  const [currentTitle, setCurrentTitle] = useState(projectInfo[0].title);
+  const [currentStack, setCurrentStack] = useState(projectInfo[0].stack);
+  const [currentDesc, setCurrentDesc] = useState(projectInfo[0].desc);
+  const [currentURL, setCurrentURL] = useState(projectInfo[0].href);
   return (
     <section
       id='projects'
@@ -34,15 +34,14 @@ const Projects = () => {
         </h1>
 
         <div className='relative hidden py-0 max-sm:flex'>
-
           <Image
-            src={bigShoeImg}
+            // src={bigShoeImg}
+            src={projectImage}
             alt="projects"
             width={500}
             height={502}
             className="object-contain relative z-0 h-[200px] rounded-xl border-2 border-green-100"
           />
-
           <div className='flex sm:gap-6 gap-4 absolute -bottom-[8%] sm:left-[10%] max-sm:px-6'>
             {projectInfo.map((projecto, index) => (
 

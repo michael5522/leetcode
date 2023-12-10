@@ -1,6 +1,6 @@
 import Image from "next/image";
 const ProjectCard = ({ imgURL, changeBigShoeImage, bigShoeImg, currentTitle, changeTitle, currentStack, changeStack, currentDesc, changeDesc, currentURL, changeURL }) => {
-
+  // console.log("fuk me", info)
   const handleClick = () => {
     if (bigShoeImg !== imgURL.bigShoe) {
       changeBigShoeImage(imgURL.bigShoe);
