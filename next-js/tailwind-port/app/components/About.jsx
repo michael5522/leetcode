@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id='about'
-      className='flex justify-between items-center max-lg:flex-col w-full min-h-screen max-container border-2 border-purple-500 max-sm:min-h-half'
+      className='flex justify-between items-center max-lg:flex-col w-full min-h-screen max-container max-sm:min-h-half'
     >
       <h2 className='hidden font-palanquin text-3xl pt-9 capitalize max-sm:flex max-sm:text-[50px] max-sm:leading-[39px] font-bold max-sm:tracking-tight'>
         About Me

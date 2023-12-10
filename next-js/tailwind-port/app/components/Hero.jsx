@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='w-full flex xl:flex-row flex-col justify-center min-h-screen gap-1 border-2 border-green-500 bg-ola max-sm:bg-minicard max-sm:min-h-half'
+      className='w-full flex xl:flex-row flex-col justify-center min-h-screen gap-1 border-b-2 border-slate-300 bg-ola max-sm:bg-minicard max-sm:min-h-half'
     >
       <div className='relative xl:w-2/5 max-xl:items-center flex pl-20 flex-col justify-center items-start w-full  max-xl:text-center max-xl:padding-x pt-28'>
         <p className='text-xl font-montserrat text-coral-red ml-5 max-sm:hidden'>
