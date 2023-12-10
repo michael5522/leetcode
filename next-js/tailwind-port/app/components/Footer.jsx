@@ -1,12 +1,12 @@
-import { copyrightSign } from "../assets/icons";
-import { footerLogo } from "../assets/images";
-import { footerLinks, socialMedia, footerInfo } from "../constants";
-import { facebook, instagram, twitter} from "../assets/icons";
+// import { copyrightSign } from "../assets/icons";
+// import { footerLogo } from "../assets/images";
+import {footerInfo } from "../constants";
+// import { facebook, instagram, twitter} from "../assets/icons";
+import { city, email, phone } from "../assets/icons";
 import Image from "next/image";
 const Footer = () => {
 
   return (
-
     <footer className='max-container2'
     id="contact">
       <div className="flex flex-col">
@@ -24,7 +24,6 @@ const Footer = () => {
               key={xd.info}
             >
           <div className="flex flex-5 lg:gap-2 gap-1 flex-wrap items-center justify-center text-white mb-5">
-
             <Image
               src={xd.pic}
               alt={xd.info}
@@ -33,18 +32,13 @@ const Footer = () => {
               className="bg-white rounded-full"
             />
             {xd.info}
-
-           </div>
+          </div>
             </a>)
         ))}
       </div>
-
-
-
       <div className="flex flex-col justify-center items-center mt-10">
         <p className="text-white">Built with Next.js w/ Tailwind</p>
       </div>
-
     </footer>
   );
 };

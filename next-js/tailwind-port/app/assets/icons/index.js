@@ -6,12 +6,14 @@ import facebook from './facebook.svg'
 import hamburger from './hamburger.svg'
 import instagram from './instagram.svg'
 import support from './support.svg'
-import shieldTick from './shield-tick.svg'
+// import shieldTick from './shield-tick.svg'
 import star from './star.svg'
-import truckFast from './truck-fast.svg'
+// import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
 import close from './close.svg'
-
+import city from './city.svg'
+import email from './email.svg'
+import phone from './phone.svg'
 export {
     arrowRight,
     cheveronRight,
@@ -21,9 +23,12 @@ export {
     hamburger,
     instagram,
     support,
-    shieldTick,
+    // shieldTick,
     star,
-    truckFast,
+    // truckFast,
     twitter,
-    close
+    close,
+    city,
+    email,
+    phone
 }

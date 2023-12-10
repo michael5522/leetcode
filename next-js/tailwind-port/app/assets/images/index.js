@@ -1,7 +1,8 @@
 import bigShoe1 from './big-shoe1.png'
 import bigShoe2 from './big-shoe2.png'
 import bigShoe3 from './big-shoe3.png'
-
+import heroSplash from './heroSplash.png'
+import mySelfie from './mySelfie.png'
 
 
 import footerLogo from './footer-logo.svg'
@@ -43,5 +44,8 @@ export {
     thumbnailBackground,
     thumbnailShoe1,
     thumbnailShoe2,
-    thumbnailShoe3
+    thumbnailShoe3,
+
+    heroSplash,
+    mySelfie
 }

@@ -1,9 +1,8 @@
-import { bigShoe1 } from "../assets/images";
+import { heroSplash } from "../assets/images";
 import Image from "next/image";
 
-
 const Hero = () => {
-  console.log(bigShoe1)
+
   return (
     <section
       id='home'
@@ -14,17 +13,15 @@ const Hero = () => {
           Hello, I am
         </p>
 
-
         <div className='hidden flex-1 justify-center items-center bg-cover bg-center mt-2 pt-15 max-sm:flex'>
           <Image
-            src={bigShoe1}
+            src={heroSplash}
             alt="logo"
             width={150}
             height={150}
             className="object-contain"
           />
-          </div>
-
+        </div>
 
         <h1 className='mt-10 font-palanquin text-8xl max-sm:text-[52px] max-sm:leading-[19px] font-bold ml-5 max-sm:-ml-0'>
           <span className='relative z-9 font-montserrat'>
@@ -38,15 +35,14 @@ const Hero = () => {
 
       <div className='flex flex-1 justify-center items-center bg-cover bg-center mt-3 pt-28 max-xl:hidden'>
         <Image
-        src={bigShoe1}
+        src={heroSplash}
         alt="logo"
         width={250}
         height={250}
         className="object-contain"
         />
-
-
       </div>
+
     </section>
   );
 };
