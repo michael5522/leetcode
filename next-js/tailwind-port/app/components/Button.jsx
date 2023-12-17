@@ -9,7 +9,8 @@ const Button = ({
   fullWidth,
   linkURL
 }) => {
-  console.log('inside button', label)
+  // console.log('button getting rendered')
+  // console.log('inside button----', label)
   return (
     <a
     href={linkURL}
