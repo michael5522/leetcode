@@ -1,18 +1,14 @@
 "use client";
 
 import { useState } from "react";
-// import { shoes } from "../constants";
 import ProjectCard from "./ProjectCard";
-// import { bigShoe1 } from "../assets/images";
 import { desktopquote } from "../assets/project-images";
 import Image from "next/image";
 import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
-
 import { projectInfo } from "../constants";
+
 const Projects = () => {
-  console.log('111', projectInfo)
-  const [bigShoeImg, setBigShoeImg] = useState(desktopquote);
   const [projectImage, setProjectImage] = useState(desktopquote);
   const [currentTitle, setCurrentTitle] = useState(projectInfo[0].title);
   const [currentStack, setCurrentStack] = useState(projectInfo[0].stack);
@@ -35,7 +31,6 @@ const Projects = () => {
 
         <div className='relative hidden py-0 max-sm:flex'>
           <Image
-            // src={bigShoeImg}
             src={projectImage}
             alt="projects"
             width={500}
@@ -48,9 +43,9 @@ const Projects = () => {
               <div key={index}>
                 <ProjectCard
                   index={index}
-                  imgURL={projecto}
-                  changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
-                  bigShoeImg={bigShoeImg}
+                  source={projecto}
+                  defaultImage={projectImage}
+                  changeDefaultImage={(xd) => setProjectImage(xd)}
                   currentTitle={currentTitle}
                   changeTitle={(xd) => setCurrentTitle(xd)}
                   currentStack={currentStack}
@@ -66,7 +61,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <p className='font-montserrat text-slate-gray min-h-[120px] text-lg leading-8 mt-14 mb-2 sm:max-w-sm max-sm:mt- max-sm:text-sm'>
+        <p className='font-montserrat text-slate-gray min-h-[120px] md:min-h-[200px] text-lg leading-8 mt-14 mb-2 sm:max-w-sm max-sm:mt- max-sm:text-sm'>
           {currentDesc}
         </p>
         <p className='font-montserrat text-slate-gray min-h-[40px] text-md leading-8 mb-14 sm:max-w-sm italic max-sm:text-sm max-sm:mb-5'>
@@ -78,10 +73,13 @@ const Projects = () => {
 
       </div>
 
+
+
+
       <div className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-splash  bg-contain bg-center max-sm:py-0 max-sm:hidden'>
 
         <Image
-          src={bigShoeImg}
+          src={projectImage}
           alt="projects"
           width={700}
           height={502}
@@ -94,9 +92,9 @@ const Projects = () => {
             <div key={index}>
               <ProjectCard
                 index={index}
-                imgURL={projecto}
-                changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
-                bigShoeImg={bigShoeImg}
+                source={projecto}
+                defaultImage={projectImage}
+                changeDefaultImage={(xd) => setProjectImage(xd)}
                 currentTitle={currentTitle}
                 changeTitle={(xd) => setCurrentTitle(xd)}
                 currentStack={currentStack}

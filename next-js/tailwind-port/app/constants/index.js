@@ -122,7 +122,7 @@ import { desktopquote, desktopwedding, mobilequote, mobilewedding, dMobile, dDes
 export const projectInfo = [
   {
     thumbnail: mobilequote,
-    bigShoe: desktopquote,
+    bigImage: desktopquote,
     title: "Supurb Quote",
     stack: "#html #css #javascript #ajax",
     desc: "A custom quote generating website that allows users to receive personally catered quotes. User has the ability to generate random quotes or select their own using various API endpoints via AJAX using XMLHttpRequests",
@@ -130,7 +130,7 @@ export const projectInfo = [
   },
   {
     thumbnail: mobilewedding,
-    bigShoe: desktopwedding,
+    bigImage: desktopwedding,
     title: "A-List Wedding",
     stack: "#reactjs #bootstrap #postgreSQL #nodejs #express",
     desc: "A mobile responsive full stack application using ReactJS to give users the tools to plan their wedding. Designed wireframes using Figma and database schema to provide functionality and database structure. User login and data stored in secure PostgreSQL database.",
@@ -138,7 +138,7 @@ export const projectInfo = [
   },
   {
     thumbnail: dMobile,
-    bigShoe: dDesktop,
+    bigImage: dDesktop,
     title: "Random BCE",
     stack: "#nextjs #tailwindcss",
     desc: "Using the latest next.js and tailwind css to create this portfolio website",

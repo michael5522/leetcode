@@ -1,5 +1,4 @@
 import { mySelfie } from "../assets/images";
-import Button from "../components/Button";
 import Image from "next/image";
 
 const About = () => {
