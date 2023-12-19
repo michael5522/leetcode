@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <section
       id='projects'
-      className='w-full flex xl:flex-row flex-col justify-center min-h-screen gap-7 max-container border-2 border-slate-600 max-sm:gap-1 max-sm:min-h-half'
+      className='w-full flex xl:flex-row flex-col justify-center min-h-screen gap-7 max-container max-sm:gap-1 max-sm:min-h-half'
     >
       <div className='relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-1'>
 
