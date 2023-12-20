@@ -28,7 +28,6 @@ export const logos = [
     imgURL: reactIMG,
     name: "React",
     href: "https://react.dev/"
-
   },
   {
     imgURL: node,
@@ -142,43 +141,22 @@ export const projectInfo = [
     desc: "Using the latest next.js and tailwind css to create this portfolio website",
     href: "https://tailwindcss.com/docs/border-radius"
   }
-
 ]
-
-// export const footerInfo = [
-//   {
-//     info: "Orange County",
-//     pic: instagram,
-//     link: "https://www.google.com/maps/place/Orange+County,+CA/@33.6410077,-118.0496294,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428"
-//   },
-//   {
-//     info: "michaelkuochang@gmail.com",
-//     pic: twitter,
-//     link: "mailto:michaelkuochang@gmail.com"
-//   },
-//   {
-//     info: "949-276-1910",
-//     pic: facebook,
-//     link: "tel:949-276-1910"
-
-//   },
-// ]
 
 export const footerInfo = [
   {
     info: "Orange County",
-    pic: city,
+    pic: email,
     link: "https://www.google.com/maps/place/Orange+County,+CA/@33.6410077,-118.0496294,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428"
   },
   {
     info: "michaelkuochang@gmail.com",
-    pic: email,
+    pic: phone,
     link: "mailto:michaelkuochang@gmail.com"
   },
   {
     info: "949-276-1910",
-    pic: phone,
+    pic: city,
     link: "tel:949-276-1910"
-
   },
 ]
