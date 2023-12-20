@@ -72,7 +72,6 @@ export const logos = [
   }
 ]
 
-
 import { aws, babel, git, github, npmImg, slack, vscode, webpack} from "../assets/tools-images";
 export const toolimages = [
   {
@@ -116,7 +115,6 @@ export const toolimages = [
     href: "https://webpack.js.org/"
   }
 ]
-
 
 import { desktopquote, desktopwedding, mobilequote, mobilewedding, dMobile, dDesktop } from "../assets/project-images";
 export const projectInfo = [
