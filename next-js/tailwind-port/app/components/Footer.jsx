@@ -1,7 +1,4 @@
-// import { copyrightSign } from "../assets/icons";
-// import { footerLogo } from "../assets/images";
 import {footerInfo } from "../constants";
-// import { facebook, instagram, twitter} from "../assets/icons";
 import { city, email, phone } from "../assets/icons";
 import Image from "next/image";
 const Footer = () => {
@@ -11,7 +8,7 @@ const Footer = () => {
     id="contact">
       <div className="flex flex-col">
         <a href="#home">
-          <h1 className="text-white text-3xl text-center"> Andrew Mckiddny</h1>
+          <h1 className="text-white text-3xl text-center font-montserrat"> Michael Chang</h1>
         </a>
       </div>
       <div className="flex items-center max-sm:flex-col max-sm:mt-1 max-sm:gap-1 gap-10 mt-10 justify-center">
@@ -29,7 +26,7 @@ const Footer = () => {
               alt={xd.info}
               width={24}
               height={24}
-              className="bg-white rounded-full"
+              className="bg-coral-red rounded-full"
             />
             {xd.info}
           </div>
