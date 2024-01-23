@@ -1,0 +1,49 @@
+body{
+  color:purple;
+  text-align: center;
+  font-family: "Rubik Burned", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 25px;
+  background: white;
+  border:none;
+}
+
+.rubik-burned-regular {
+  font-family: "Rubik Burned", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.ola{
+  border-bottom: 4px solid white;
+}
+
+
+#cat{
+  width: 155px;
+}
+
+#hero {
+  background-image: url("./images/skills.png");
+    background-size: cover;
+    padding: 10px 0 40px 0;
+}
+
+.footer {
+  background-color:bisque;
+}
+
+h3{
+  margin: 0;
+  padding: 20px 0;
+}
+
+h1{
+  text-shadow: 0px 0px 4px green;
+}
