@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Ultra&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" class="rel">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+  <div class="container">
+    <img src="./assets/cat.png" id="imgTag" />
+    <h1 id="date">Today's Date</h1>
+    <div id="message">Please take your morning medicine!</div>
+    <div class="inner-container">
+      <div>
+        <input class="checkmark" type="checkbox" id="AMcheck">
+        <h2>AM</h2>
+      </div>
+      <div>
+        <input class="checkmark" type="checkbox" id="PMcheck">
+        <h2>PM</h2>
+      </div>
+    </div>
+    <button id="reset">RESET</button>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
