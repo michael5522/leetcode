@@ -1,0 +1,100 @@
+body{
+  font-size:16px;
+  font-family: "Roboto";
+  color: #2b283a;
+  margin: 0;
+}
+
+header {
+  background-color: #5f29a3;
+  padding: 45px 0px;
+}
+
+h1{
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+}
+
+h2{
+  margin-top: 0;
+}
+
+h3{
+  margin: 0;
+  color:#d0aaff;
+  font-size: 20px;
+}
+
+section {
+  padding: 45px 0px;
+}
+
+.sneaker{
+  width: 100%;
+}
+
+a{
+  color: #ef5839;
+  text-decoration-style: dotted;
+}
+
+a:hover, a:active{
+  color: #d4b44c;
+}
+
+.container{
+  width: 620px;
+  margin: 0 auto;
+  border: 1px solid green;
+}
+
+.section-two {
+  background-color: #5f29a3;
+  color: whitesmoke;
+}
+
+.section-two-image-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-image{
+  width: 300px;
+  border-radius: 4.6px;
+}
+
+footer{
+  text-align:center;
+  padding: 45px 0px;
+  color: #5f29a3;
+}
+
+.btn {
+  padding: 10px 19px;
+  border-radius: 4.6px;
+  font-weight: 500;
+  text-decoration: none;
+  display:inline-block;
+}
+.buy{
+  color:whitesmoke;
+  background-color: #5f29a3;
+}
+
+.info{
+  color:#5f29a3;
+  background-color:#f0e0ff;
+}
+
+.about {
+  color: #5f29a3;
+  background-color:whitesmoke;
+}
+
+
+.btn:hover, .btn:active{
+  background-color: #f3e885;
+  color: #2b283a;
+}
