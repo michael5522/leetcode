@@ -166,3 +166,7 @@ input {
   line-height: 23px;
   margin-bottom: 0;
 }
+
+.opposite{
+  flex-direction: row-reverse;
+}
