@@ -51,7 +51,7 @@ mealOneEl.addEventListener("click", function(){
   statusThree = JSON.parse(localStorage.getItem("statusThreeLocal"))
   if(statusThree){
     messageEl.textContent = "Good Job! Eating your first meal!"
-    imgEl.src = "./assets/cat2.png";
+    imgEl.src = "./assets/cat4.svg";
   }
 })
 
@@ -61,7 +61,7 @@ mealTwoEl.addEventListener("click", function (){
   statusFour = JSON.parse(localStorage.getItem("statusFourLocal"))
   if(statusFour){
     messageEl.textContent = "Good Job! You ate meal two!"
-    imgEl.src = "./assets/cat3.png";
+    imgEl.src = "./assets/cat5.png";
   }
 })
 function uncheckAll() {
@@ -69,7 +69,7 @@ function uncheckAll() {
     .forEach(el => el.checked = false);
 }
 
-resetEl.addEventListener("click", function(){
+resetEl.addEventListener("dblclick", function(){
   localStorage.clear();
   statusOne = false;
   statusTwo = false;
