@@ -1,23 +1,49 @@
 import { tweetsData } from './data.js';
 console.log('ola')
-console.log(typeof tweetsData)
-
-const tweetInput = document.getElementById('tweet-input')
-const tweetBtn = document.getElementById('tweet-btn')
-
-
-tweetBtn.addEventListener('click',  function(){
-  console.log(tweetInput.value)
-
-})
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+console.log(uuidv4());
 
 document.addEventListener('click', function(e){
    if(e.target.dataset.like){
     handleLikeClick(e.target.dataset.like)
    }else if(e.target.dataset.retweet){
     handleRetweetClick(e.target.dataset.retweet)
+   }else if(e.target.dataset.reply){
+    handleReplyClick(e.target.dataset.reply)
+   }else if(e.target.id === "tweet-btn"){
+    handleTweetBtnClick()
    }
 })
+
+function handleTweetBtnClick() {
+  const tweetInput = document.getElementById('tweet-input')
+  if(tweetInput.value){
+    const obj = {
+      handle: `@Scrimba`,
+      profilePic: `images/scrimbalogo.png`,
+      likes: 0,
+      retweets: 0,
+      tweetText: tweetInput.value,
+      replies: [],
+      isLiked: false,
+      isRetweeted: false,
+      uuid: uuidv4()
+    }
+    tweetsData.unshift(obj)
+    tweetInput.value = '';
+    render();
+  }
+}
+
+function handleReplyClick(tweetId){
+  let gg = document.querySelector(`#replies-${tweetId}`)
+  // if(gg.classList.contains("hidden")){
+  //   gg.classList.remove("hidden");
+  // }else{
+  //   gg.classList.add("hidden");
+  // }
+  gg.classList.toggle("hidden")
+}
 
 function handleLikeClick(tweetId){
 let targetTweetObj = null;
@@ -69,7 +95,7 @@ function getFeedHtml(){
     if(tweet.replies.length > 0){
 
       for(const element of tweet.replies){
-        console.log(element)
+
         repliesHtml +=
         `
         <div class="tweet-reply">
@@ -83,7 +109,6 @@ function getFeedHtml(){
         </div>
         `
       }
-
     }
 
     feedHtml += `
