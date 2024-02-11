@@ -1,5 +1,6 @@
 function mergeSort(n){
   if(n.length<2){
+    console.log('triggered here',n)
     return n
   }
 // console.log('array length',n.length)
@@ -11,6 +12,7 @@ console.log('array divdeded left',firstHalf, 'array divided right',secondHalf)
 
 return merge(mergeSort(firstHalf), mergeSort(secondHalf))
   function merge(leftArr, rightArr) {
+    console.log('merging area----')
     console.log('leftArr---', leftArr)
     console.log('rightArr', rightArr)
     const array = [];
@@ -21,12 +23,13 @@ return merge(mergeSort(firstHalf), mergeSort(secondHalf))
         array.push(rightArr.shift())
       }
     }
-    console.log('ola', array)
+    console.log('ola', array.concat(leftArr.slice()).concat(rightArr.slice()))
+    console.log('----loop over')
     return array.concat(leftArr.slice()).concat(rightArr.slice());
 
   }
 }
 
 
-const gg= [-6,20,8,-2,4]
+const gg= [20,6,8,4,-2]
 console.log(mergeSort(gg))
