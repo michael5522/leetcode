@@ -9,11 +9,12 @@ function mergeSort(xxx){
   const mid = Math.floor(length/2);
   let leftArr = xxx.slice(0,mid);
   let rightArr = xxx.slice(mid);
-  console.log(leftArr, rightArr);
+  console.log('left--',leftArr, 'right--',rightArr);
   return merge(mergeSort(leftArr), mergeSort(rightArr))
 }
 
 function merge(leftSide, rightSide){
+  console.log('inside merge', leftSide, rightSide)
   let temp = [];
   while(leftSide.length && rightSide.length){
     if(leftSide[0]< rightSide[0]){
@@ -22,7 +23,7 @@ function merge(leftSide, rightSide){
       temp.push(rightSide.shift())
     }
   }
-
+  console.log('123',[...temp, ...leftSide, ...rightSide])
   return [...temp, ...leftSide, ...rightSide]
 }
 
