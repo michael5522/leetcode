@@ -1,4 +1,6 @@
 let gg = "aaaabbbc"
+let pp = "cbbbbaaa"
+let op = "ccccc"
 
 function test(string){
   //step 1
@@ -10,6 +12,7 @@ function test(string){
       obj[string[i]] =  1
     }
   }
+  console.log(obj)
   //step 2
   let sortable = [];
   for (const property in obj) {
@@ -36,12 +39,14 @@ function test(string){
     }
     sortable.sort((a, b) => b[1] - a[1]);
     console.log(sortable)
+    console.log('ola',ans)
   }
-
+  console.log('length === 1')
   if(sortable.length === 1) {
     if(sortable[0][1] > 1) {
       ans = 'no answer';
     } else {
+      console.log('wtf?')
       ans = ans + sortable[0][0];
     }
   }
@@ -49,4 +54,4 @@ function test(string){
   return ans;
 }
 
-console.log(test(gg))
+console.log(test(pp))
