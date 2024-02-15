@@ -1,6 +1,4 @@
-let gg = "aaaabbbc"
-let pp = "cbbbbaaa"
-let op = "ccccc"
+let op = "aaabc"
 
 function test(string){
   //step 1
@@ -54,4 +52,4 @@ function test(string){
   return ans;
 }
 
-console.log(test(pp))
+console.log(test(op))

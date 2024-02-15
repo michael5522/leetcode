@@ -1,17 +1,18 @@
 let gg = "cbbbbaaa";
+let op = "aaabc"
 
 function test(string){
   const obj1 = {}
   for(const element of string){
-    // console.log(element)
+    console.log('element', element)
     if(obj1[element]){
-      obj1[element]++
+      obj1[element] ++
     }else{
       obj1[element] = 1;
     }
   }
   //count char in obj
-  // console.log('one',obj1)
+  console.log('one',obj1)
 
 
   let array = [];
@@ -19,7 +20,7 @@ function test(string){
     array.push([property, obj1[property]])
   }
   //put char count into array so sort can be used
-  // console.log('two',array)
+  console.log('two',array)
 
 
   let sorting = array.sort((a,b)=> b[1]- a[1])
@@ -43,7 +44,7 @@ function test(string){
     sorting.sort((a,b) => b[1] - a[1])
     //final step checking two chars
     console.log('four', sorting)
-    console.log('answer', ans)
+    // console.log('answer', ans)
   }
   if(sorting.length === 1){
     if(sorting[0][1] > 1){
@@ -58,5 +59,4 @@ function test(string){
 
 
 let pp = "cbbbbaaa"
-let op = "ccccc"
-console.log(test(pp));
+console.log(test(op));

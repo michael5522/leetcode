@@ -57,10 +57,10 @@ a:active {
     font-weight: 500;
     text-decoration: none;
     display: inline-block;
-    padding: .5em 1em;
-    border-radius: 4.6px;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
     margin-bottom: 1em;
-    margin-right: .5em;
+    border-radius: 4.6px;
 }
 
 .btn-dark {
@@ -104,28 +104,36 @@ header,
 .container {
     width: 90%;
     max-width: 800px;
-    border: 2px solid tomato;
     margin: 0 auto;
 }
 
 .main-image {
     width: 100%;
-    max-width: 500px;
-    display:block;
+    display: block;
+    max-width: 640px;
     margin: 0 auto 2em;
 }
 
-.section-two-image-container {
-    display: flex;
-    justify-content: space-between;
-}
-
 .feature-image {
-    width: 48.8%;
+    width: 100%;
     border-radius: 4.6px;
+    margin-bottom: 1em;
 }
 
 footer {
     text-align: center;
     color: #5f29a3;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 480px) {
+    .section-two-image-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .feature-image {
+        width: 48.8%;
+    }
 }
